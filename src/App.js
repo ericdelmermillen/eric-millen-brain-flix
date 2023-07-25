@@ -8,7 +8,7 @@ function App() {
       <h1>Hello From First Commit On Develop</h1>
       <h2>Message After Setting Fonts</h2>
       <h3>Message After Creating feature-variables branch off of develop</h3>
-      <h4>Message for merging feature-variables back into develop</h4>
+      <h4>Message After creating feature-mixins</h4>
     </div>
   );
 }
