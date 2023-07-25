@@ -10,7 +10,7 @@ function App() {
       <h3>Message After Creating feature-variables branch off of develop</h3>
       <h4>Message After creating feature-mixins</h4>
       <button>Click Me</button>
-      <button>Mixins Commit</button>
+      <button>Mixins Post-Commit</button>
     </div>
   );
 }
