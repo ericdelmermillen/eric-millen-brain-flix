@@ -1,0 +1,76 @@
+
+// Break Points: 
+$mobile-width: 677px;
+$tablet-width: 678px;
+$desktop-width: 1280px;
+
+// Fonts:
+
+// Fonts - Page- Header - Mobile:
+$font-size-h1-mobile: 24px;
+$font-line-height-h1-mobile: 32px; 
+$font-weight-h1-mobile: 700;
+
+// // Fonts - Page- Header - Tablet & Desktop:
+$font-size-h1-tablet: 33px;
+$font-line-height-h1-tablet: 44px;
+$font-weight-h1-tablet: 700;
+
+// // Fonts - Section-Header - Mobile:
+$font-size-h2-mobile: 12px;
+$font-line-height-h2-mobile: 20px;
+$font-weight-h2-tablet: 700;
+
+// // Fonts - Section-Header - Tablet & Desktop:
+$font-size-h2-tablet: 12px;
+$font-line-height-h2-tablet: 20px;
+$font-weight-h2-tablet: 700;
+
+// // Fonts - Subheader - Mobile:
+$font-size-h3-mobile: 13px;
+$font-line-height-h3-mobile: 18px;
+$font-weight-h3-tablet: 700;
+
+// // Fonts - Subheader - Tablet:
+$font-size-h3-tablet: 14px;
+$font-line-height-h3-tablet: 22px;
+$font-weight-h3-tablet: 700;
+
+// // Fonts - Body Copy - Mobile:
+$font-size-body-mobile: 13px;
+$font-line-height-body-mobile: 18px;
+$font-weight-body-tablet: 400;
+
+// // Fonts - Body Copy - Tablet:
+$font-size-body-tablet: 14px;
+$font-line-height-body-tablet: 22px;
+$font-weight-body-tablet: 400;
+
+// // Fonts - Label & Button - Mobile:
+$font-size-label-button-mobile: 10px;
+$font-line-height-label-button-mobile: 20px;
+$font-weight-label-button-tablet: 700;
+
+// // Fonts - Label & Button - Tablet:
+$font-size-label-button-tablet: 12px;
+$font-line-height-label-button-tablet: 20px;
+$font-weight-label-button-tablet: 700;
+
+
+// // Colors:
+
+// // Colors - Primary:
+$BrainFlix-Black: #323232; // Primary Text color
+$BrainFlixBlue: #0095FF; // Primary CTA color, Active form field outline color
+$Silver: #AFAFAF; // Secondary text color, text label color
+$white: #fff; // Background color, CTA Text color
+
+// // Colors - Secondary:
+$BrainFlix-DarkBlack: #000; // Video Player components
+$BrainFlix-DarkBlue: #0065AD; //CTA hover Stae color
+$Mercury: #E1E1E1; //Divider line, form field outline color (non-active, non-error state?)
+$Alabaster: #FAFAFA; // Form field background color
+
+// $hero-image-overlay-color: rgba(50, 50, 50, 0.5);
+// $mercury-opacity-zero: rgba(225, 225, 225, 0);
+

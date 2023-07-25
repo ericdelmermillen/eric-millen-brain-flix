@@ -1,5 +1,6 @@
-import "./styles/_global.scss";
 import "./App.scss";
+import "./styles/partials/_global.scss"
+import "./styles/partials/_variables.scss";
 
 function App() {
   return (
