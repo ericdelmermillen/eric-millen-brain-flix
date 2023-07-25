@@ -1,15 +1,8 @@
 @use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
 
-h1 {
-  color: red;
-  font-size: $font-size-h1-mobile;
-  line-height: $font-line-height-h1-mobile; 
-  font-weight: $font-weight-h1-mobile;
-  
-  @media (min-width: $tablet-width) {
-    color: green;
-    font-size: $font-size-h1-tablet;
-    line-height: $font-line-height-h1-tablet; 
-    font-weight: $font-weight-h1-tablet;
-  }
+button {
+  @include btn;
+  @include margin-inline;
+  @include margin-block;
 }
