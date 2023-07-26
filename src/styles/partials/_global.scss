@@ -32,7 +32,12 @@
 }
 
 body {
-  font-family: "AvenirNext"
+  font-family: "AvenirNext";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  border: 4px solid blue;
 }
 
 a, 
