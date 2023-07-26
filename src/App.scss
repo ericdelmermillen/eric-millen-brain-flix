@@ -1,8 +1,8 @@
 @use "./styles/partials/variables" as *;
 @use "./styles/partials/mixins" as *;
 
-button {
-  @include btn;
-  @include margin-inline;
-  @include margin-block;
-}
+// .btn {
+//   @include btn;
+//   @include margin-inline;
+//   @include margin-block;
+// }
