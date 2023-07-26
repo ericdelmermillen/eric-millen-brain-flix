@@ -1,5 +1,5 @@
-import Button from "./Button";
-import Avatar from "../Components/Avatar";
+import Button from "../Button/Button";
+import Avatar from "../Avatar/Avatar";
 import uploadIcon from "../../assets/images/Icons/upload.svg"
 import logo from "../../assets/images/Logo/BrainFlix-logo.svg"
 import avatar from "../../assets/images/Images/Mohan-muruge.jpg"

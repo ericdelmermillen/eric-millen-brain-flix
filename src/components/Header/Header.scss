@@ -1,3 +1,4 @@
+@use "../../styles/partials/global" as *;
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
@@ -9,7 +10,7 @@
     $padding-bottom-desktop: 0
   );
   width: 100%;
-  max-width: 1280px;
+  // max-width: 1280px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -18,7 +19,6 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      // width: 1000px;
       width: 100%;
     }
 
