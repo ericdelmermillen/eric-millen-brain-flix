@@ -1,9 +1,11 @@
 import "./Avatar.scss"
+import userPlaceholderImg from "../../assets/images/Images/user-placeholder.png"
 
-function Avatar({avatar, avatarAlt}) {
+// console.log(first)
+
+function Avatar({avatar}) {
   const divStyle = {
-    backgroundImage: `url(${avatar})`,
-    // backgroundImage: `url(${avatar})` || "../alt-image-source-for-default-image",
+    backgroundImage: `url(${avatar || userPlaceholderImg})`,
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   };

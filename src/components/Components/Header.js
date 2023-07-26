@@ -11,7 +11,7 @@ function Header() {
     <div className="header__container">
       <img className="header__logo" src={logo} alt="" />
       <input className="header__search" type="text" placeholder="Search"/>
-      <Avatar avatar={avatar} avatarAlt="avatar of you, the logged in user"/>
+      <Avatar avatar={avatar}/>
       <Button buttonText="Upload" iconSource={uploadIcon} iconAlt="upload icon"/>
     </div>
   )
