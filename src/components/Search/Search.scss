@@ -2,10 +2,9 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.header__search {
+.search {
   height: 40px;
   border: 2px solid green;
   display: inline-block;
   @include margin-block;
-  // width: 10rem;
 }

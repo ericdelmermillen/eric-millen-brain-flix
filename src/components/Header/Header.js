@@ -14,14 +14,13 @@ function Header() {
   backgroundRepeat: "no-repeat",
   backgroundPosition: "5px center",
   paddingLeft: "30px",
-  width: `calc(100% - 50px)`,
-  // maxWidth: "300px",
+  width: `calc(100% - 50px)`
 };
   
   return (
     <div className="header__container">
       <img className="header__logo" src={logo} alt="" />
-      <Search searchIconStyle={searchIconStyle} placeholder="Search" classname="header"/>
+      <Search searchIconStyle={searchIconStyle} placeholder="Search"/>
       <Avatar avatar={avatar}/>
       <Button buttonText="UPLOAD" iconSource={uploadIcon} iconAlt="upload icon"/>
     </div>

@@ -5,3 +5,25 @@
 h3 {
  color: $BrainFlix-DarkBlue;
 }
+
+.hero__video-container {
+  width: 100%;
+  border: 2px solid blue;
+  margin: 0 auto;
+  max-width: $desktop-width;
+  background: #000;;
+  // display: flex;
+  // justify-content: center;
+}
+
+.hero__video {
+  border:5px solid green;
+  margin: 0 auto;
+  width: 300px;
+  display: block;
+}
+
+video::-webkit-media-controls-panel {
+  background-color: $BrainFlix-Black; /* Change to desired color */
+  opacity: 0.2; /* Change to desired opacity (0 to 1) */
+}

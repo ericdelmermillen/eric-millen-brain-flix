@@ -1,10 +1,10 @@
 import React from 'react';
 import "./Search.scss";
 
-function Search({searchIconStyle, placeholder, classname}) {
+function Search({searchIconStyle, placeholder}) {
   return (
     <>
-    <input className={`${classname}__search`} type="text" placeholder={placeholder} style={searchIconStyle}/>
+    <input className="search" type="text" placeholder={placeholder} style={searchIconStyle}/>
     </>
   )
 }
