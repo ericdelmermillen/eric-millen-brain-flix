@@ -7,6 +7,7 @@ import Header from "./components/Header/Header";
 // import commentIcon from "./assets/images/Icons/add_comment.svg"
 
 function App() {
+
   return (
     <div className="App">
       <Header />
@@ -16,3 +17,6 @@ function App() {
 }
 
 export default App;
+
+// Questions
+// Make class setable on calling the component via passing in Block part of name to amend to __Element? *** Search component
