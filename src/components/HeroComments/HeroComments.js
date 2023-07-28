@@ -1,31 +1,22 @@
-import "./HeroComments.scss"
-import Avatar from "../Avatar/Avatar";
+import "./HeroComments.scss";
 
-function HeroComments({currentVideo}) {
+import CommentCard from "../CommentCard/CommentCard";
 
-  console.log(currentVideo)
+function HeroComments({ currentVideo }) {
+  const {comments} = currentVideo;
+  // console.log(comments)
+
+
   return (
-    
     <section className="hero__comments">
+      {comments.map((comment) => 
+        <CommentCard
+          key={comment.id} comment={comment}
+        />
+      )}
 
-    <div className="comment">
-      <Avatar />
-
-{/* <Comment here (or HeroComment) */}
-      <div className="comment__text">
-
-        <p className="comment__name">{currentVideo.comments[0].name}
-          <span className="comment__date">{currentVideo.comments[0].timestamp}</span>
-        </p>
-        <p>{currentVideo.comments[0].comment}</p>
-
-      </div>
-
-    </div>
-
-  </section>
-
-  )
+    </section>
+  );
 }
 
-export default HeroComments
+export default HeroComments;

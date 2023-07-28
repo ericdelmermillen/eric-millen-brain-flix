@@ -5,6 +5,7 @@ import NewComment from "../NewComment/NewComment";
 import HeroComments from "../HeroComments/HeroComments";
 
 import HeroDetails from "../HeroDetails/HeroDetails";
+import NextVideos from "../NextVideos/NextVideos";
 import videoDetails from "../../data/video-details.json";
 import videos from "../../data/videos.json";
 
@@ -34,22 +35,10 @@ function Main() {
       <NewComment commentIcon={commentIcon} avatar={avatar}/>
 
       <HeroComments currentVideo={currentVideo} avatar={avatar}/>
-      
-      <section className="next-videos">
-        <h2 className="next-videos__heading">NEXT VIDEOS</h2>
-        <div className="video__list">
-          
-          <div className="video">
-            <img className="video__thumbnail" src={videos[1].image} alt="" />
-            <div className="video__text">
-              <h3 className="video__title">{videos[1].title}</h3>
-              <p className="video__channel">{videos[1].channel}</p>
-            </div>
 
-          </div>
-        </div>
+      <NextVideos videos={videos}/>
 
-      </section>
+
 
 
     </main>
