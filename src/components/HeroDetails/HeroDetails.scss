@@ -1,0 +1,31 @@
+@use "../../styles/partials/global" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.hero__details {
+  border-bottom: 5px dotted #000; 
+  
+  @media (min-width: $desktop-width) {
+    width: 50%;
+  }
+}
+
+.hero__header {
+  display: flex;
+}
+
+.hero__stats {
+  border: 2px solid red;
+  display: flex;
+}
+
+.hero__views {
+  display: flex;
+  border: 2px solid blue;
+}
+
+.hero__likes {
+  display: flex;
+  border: 2px solid green;
+}
