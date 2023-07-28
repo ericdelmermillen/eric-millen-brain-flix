@@ -5,7 +5,7 @@
 .main {
   border: 5px solid green!important;
   // color: green;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 //HeroDetails
@@ -27,4 +27,25 @@
 .hero__likes {
   display: flex;
   border: 2px solid green;
+}
+
+// HeroForm
+.hero__new-comment {
+  border: 2px solid blue;
+  display: flex;
+  justify-content: space-between;
+  // flex-direction: column;
+}
+
+.comment-input__container {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+
+}
+
+.avatar {
+  border: 5px solid purple;
+  order: 0;
 }

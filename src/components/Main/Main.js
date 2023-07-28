@@ -1,7 +1,12 @@
 import "./Main.scss"
+import Button from "../Button/Button";
+import Avatar from "../Avatar/Avatar";
 import videoDetails from "../../data/video-details.json";
+
+import avatar from "../../assets/images/Images/Mohan-muruge.jpg"
 import viewsIcon from "../../assets/images/Icons/views.svg"
 import likesIcon from "../../assets/images/Icons/likes.svg"
+import commentIcon from "../../assets/images/Icons/add_comment.svg"
 
 let date = new Date(videoDetails[0].timestamp).toLocaleDateString(
   "en-US", {
@@ -12,7 +17,8 @@ let date = new Date(videoDetails[0].timestamp).toLocaleDateString(
 
 
 function Main() {
-  console.log(videoDetails[0].description)
+
+  // console.log(videoDetails[0].description)
   return (
     <main className="main">
       <h1 className="main__heading">Main</h1>
@@ -43,6 +49,22 @@ function Main() {
         <p className="hero__comment-count">{videoDetails[0].comments.length} Comments</p>
 
       </section>
+      
+      <section className="hero__new-comment">
+        <Avatar avatar={avatar}/>
+        
+
+        <form id="commentForm" class="hero__form" method="GET" >
+            <div class="comment-input__container">
+              <label class="comment__label" for="comment">JOIN THE CONVERSATION</label>
+              <textarea class="comment__input--text" id="comment" name="comment" placeholder="Add a new comment" minlength="100"></textarea>
+          <Button id="commentBtn" buttonText="COMMENT" iconSource={commentIcon} iconAlt="comment icon"/>
+            </div>
+        </form>
+
+      </section>
+
+
     </main>
   )
 }
