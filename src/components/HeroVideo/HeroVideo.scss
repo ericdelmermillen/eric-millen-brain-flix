@@ -2,10 +2,6 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-h3 {
- color: $BrainFlix-DarkBlue;
-}
-
 .hero__video-container {
   width: 100%;
   border: 2px solid blue;
@@ -17,9 +13,9 @@ h3 {
 }
 
 .hero__video {
-  border:5px solid green;
+  border: 5px solid blue;
   margin: 0 auto;
-  width: 300px;
+  width: 70%;
   display: block;
 }
 

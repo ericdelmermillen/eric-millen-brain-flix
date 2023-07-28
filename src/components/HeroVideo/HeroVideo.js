@@ -11,7 +11,7 @@ const videosArr = videoDetails;
 
 function HeroVideo() {
   const [ currentVideo, setCurrentVideo ] = useState(videosArr[0]);
-  console.log(currentVideo.image)
+  // console.log(currentVideo.image)
 
   return (
       <div className="hero__video-container">

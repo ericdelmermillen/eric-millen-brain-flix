@@ -2,7 +2,8 @@ import "./App.scss";
 import "./styles/partials/_global.scss"
 import "./styles/partials/_variables.scss";
 import Header from "./components/Header/Header";
-import HeaderVideo from "./components/HeroVideo/HeroVideo"
+import Main from "./components/Main/Main";
+// import HeaderVideo from "./components/HeroVideo/HeroVideo"
 import HeroVideo from "./components/HeroVideo/HeroVideo";
 // import Button from "./components/Button/Button";
 
@@ -15,6 +16,7 @@ function App() {
       <Header />
       {/* <Button buttonText="Component" iconSource={commentIcon} iconAlt="comment icon"/> */}
       <HeroVideo/>
+      <Main />
     </div>
   );
 }
