@@ -30,7 +30,7 @@
 }
 
 // HeroForm
-.hero__comment {
+.hero__new-comment {
   border: 2px solid blue;
   display: flex;
   justify-content: space-between;
@@ -42,10 +42,46 @@
   display: flex;
   flex-direction: column;
   width: 1000px;
-
 }
 
 .avatar {
-  border: 5px solid purple;
   order: 0;
+}
+
+// Comment List
+.hero__comments {
+  min-height: 100vh;
+  border: 4px solid blue;
+}
+
+.hero__comment-text {
+  border: 2px solid purple;
+}
+
+
+
+// Comment
+
+.comment {
+  border: 2px solid green;
+  width: 100%;
+  display: flex;
+}
+
+.comment__name {
+  border: 2px solid blue;
+  display: flex;
+  width: 100%; 
+}
+
+.comment__text {
+  width: 100%;
+  border: 2px solid green;
+}
+
+
+
+.comment__date {
+  border: 2px solid red;
+  margin-left: auto;
 }

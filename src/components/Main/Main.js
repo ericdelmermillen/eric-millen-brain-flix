@@ -8,17 +8,25 @@ import viewsIcon from "../../assets/images/Icons/views.svg"
 import likesIcon from "../../assets/images/Icons/likes.svg"
 import commentIcon from "../../assets/images/Icons/add_comment.svg"
 
-let date = new Date(videoDetails[0].timestamp).toLocaleDateString(
+let date = new Date(videoDetails[0].comments[0].timestamp).toLocaleDateString(
   "en-US", {
       year: "numeric",
       month: "2-digit",
       day: "2-digit"
-      })
+    })
 
+let commentDate = new Date(videoDetails[0].comments[0].timestamp).toLocaleDateString(
+  "en-US", {
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit"
+    })
+
+  
 
 function Main() {
 
-  // console.log(videoDetails[0].description)
+  console.log(videoDetails[0].comments[0].comment)
   return (
     <main className="main">
       <h1 className="main__heading">Main</h1>
@@ -32,7 +40,6 @@ function Main() {
             <h3>By {videoDetails[0].channel}</h3>
             <p>{date}</p>
           </header>
-
 
           <div className="hero__views">
             <img src={viewsIcon} alt="" />
@@ -50,18 +57,35 @@ function Main() {
 
       </section>
       
-      <section className="hero__comment">
+      <section className="hero__new-comment">
         
         <Avatar avatar={avatar}/>
 
-        <form id="commentForm" class="hero__form" method="GET" >
+        <form id="commentForm" className="hero__form" method="GET" >
 
-          <label class="hero__comment-label" for="comment">JOIN THE CONVERSATION</label>
-          <textarea class="hero__comment-input" id="comment" name="comment" placeholder="Add a new comment" minlength="100" />
+          <label className="hero__comment-label" htmlFor="comment">JOIN THE CONVERSATION</label>
+          <textarea className="hero__comment-input" id="comment" name="comment" placeholder="Add a new comment" />
           
           <Button id="commentBtn" buttonText="COMMENT" iconSource={commentIcon} iconAlt="comment icon"/>
 
         </form>
+
+      </section>
+
+      <section className="hero__comments">
+
+        <div className="comment">
+          <Avatar avatar={avatar}/>
+
+          <div className="comment__text">
+            <p className="comment__name">{videoDetails[0].comments[0].name}
+              <span className="comment__date">{commentDate}</span>
+            </p>
+            <p>{videoDetails[0].comments[0].comment}</p>
+
+          </div>
+
+        </div>
 
       </section>
 
