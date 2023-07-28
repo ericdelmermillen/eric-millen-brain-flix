@@ -6,18 +6,18 @@
   @include btn;
   @include margin-inline;
   @include margin-block;
-  display: flex;
   align-items: center;
+  display: flex;
   justify-content: center;
   position: relative;
   
   &__icon {
     justify-self: flex-start;
+    left: 0.25rem;
+    margin-right: 0;
     padding-left: 0.25rem;
     padding-right: 0;
-    margin-right: 0;
     position: absolute;
-    left: 0.25rem;
   }
   
   &__text {

@@ -3,7 +3,6 @@ import "./Video.scss"
 function Video({video, updateCurrentVideo}) {
   const {title, channel, image, id} = video;
 
-
   return (
       <div className="video" onClick={() => updateCurrentVideo(id)}>
         <img className="video__thumbnail" src={image} alt="" />

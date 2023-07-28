@@ -10,9 +10,9 @@ import "./Header.scss"
 function Header() {
   const searchIconStyle = {
   backgroundImage: `url(${searchIcon})`,
-  backgroundSize: "20px",
-  backgroundRepeat: "no-repeat",
   backgroundPosition: "5px center",
+  backgroundRepeat: "no-repeat",
+  backgroundSize: "20px",
   paddingLeft: "30px",
   width: `calc(100% - 50px)`
 };

@@ -2,6 +2,15 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-h3 {
-  color: red;
+.video {
+  display: flex;
+  
+  &__text {
+    border: 2px solid red;
+  }
+  
+  &__thumbnail {
+    width: 150px;
+    height: 80px;
+  }
 }

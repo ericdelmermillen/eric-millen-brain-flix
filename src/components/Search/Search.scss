@@ -3,8 +3,8 @@
 @use "../../styles/partials/variables" as *;
 
 .search {
-  height: 40px;
+  @include margin-block;
   border: 2px solid green;
   display: inline-block;
-  @include margin-block;
+  height: 40px;
 }

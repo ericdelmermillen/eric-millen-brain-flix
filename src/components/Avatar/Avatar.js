@@ -1,7 +1,5 @@
-import "./Avatar.scss"
-import userPlaceholderImg from "../../assets/images/Images/user-placeholder.png"
-
-// console.log(first)
+import "./Avatar.scss";
+import userPlaceholderImg from "../../assets/images/Images/user-placeholder.png";
 
 function Avatar({avatar}) {
   const divStyle = {

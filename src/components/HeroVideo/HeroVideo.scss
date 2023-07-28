@@ -2,21 +2,21 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.hero__video-container {
-  width: 100%;
-  border: 2px solid blue;
-  margin: 0 auto;
-  max-width: $desktop-width;
-  background: #000;;
-  // display: flex;
-  // justify-content: center;
-}
+.hero {
+  &__video-container {
+    background: #000;;
+    border: 2px solid blue;
+    margin: 0 auto;
+    max-width: $desktop-width;
+    width: 100%;
+  }
 
-.hero__video {
-  border: 5px solid blue;
-  margin: 0 auto;
-  width: 70%;
-  display: block;
+  &__video {
+    border: 5px solid blue;
+    display: block;
+    margin: 0 auto;
+    width: 70%;
+  }
 }
 
 video::-webkit-media-controls-panel {

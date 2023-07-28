@@ -9,18 +9,18 @@
     $padding-bottom-tablet: 0,
     $padding-bottom-desktop: 0
   );
-  width: 100%;
-  max-width: 1280px;
-  display: flex;
   align-items: center;
+  display: flex;
   flex-wrap: wrap;
+  max-width: 1280px;
+  width: 100%;
   
   @media (min-width: $tablet-width) {
-      flex-wrap: nowrap;
-      align-items: center;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
     }
   }
 

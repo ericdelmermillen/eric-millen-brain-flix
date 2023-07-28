@@ -1,12 +1,10 @@
 import "./Main.scss"
-import { useState } from "react";
 
 import NewComment from "../NewComment/NewComment";
 import HeroComments from "../HeroComments/HeroComments";
 
 import HeroDetails from "../HeroDetails/HeroDetails";
 import NextVideos from "../NextVideos/NextVideos";
-import videoDetails from "../../data/video-details.json";
 import videos from "../../data/videos.json";
 
 import avatar from "../../assets/images/Images/Mohan-muruge.jpg"

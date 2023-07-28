@@ -1,4 +1,5 @@
 import Avatar from "../Avatar/Avatar";
+import "./CommentCard.scss";
 
 function CommentCard({ comment }) {
   const { name, comment: commentText, timestamp } = comment; 
@@ -13,8 +14,7 @@ function CommentCard({ comment }) {
     <div className="comment">
       <Avatar />
       <div className="comment__text">
-        <p className="comment__name">
-          {name}
+        <p className="comment__name">{name}
           <span className="comment__date">{formattedTimestamp}</span>
         </p>
         <p>{commentText}</p> 
