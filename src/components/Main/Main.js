@@ -50,16 +50,17 @@ function Main() {
 
       </section>
       
-      <section className="hero__new-comment">
-        <Avatar avatar={avatar}/>
+      <section className="hero__comment">
         
+        <Avatar avatar={avatar}/>
 
         <form id="commentForm" class="hero__form" method="GET" >
-            <div class="comment-input__container">
-              <label class="comment__label" for="comment">JOIN THE CONVERSATION</label>
-              <textarea class="comment__input--text" id="comment" name="comment" placeholder="Add a new comment" minlength="100"></textarea>
+
+          <label class="hero__comment-label" for="comment">JOIN THE CONVERSATION</label>
+          <textarea class="hero__comment-input" id="comment" name="comment" placeholder="Add a new comment" minlength="100" />
+          
           <Button id="commentBtn" buttonText="COMMENT" iconSource={commentIcon} iconAlt="comment icon"/>
-            </div>
+
         </form>
 
       </section>
