@@ -1,17 +1,33 @@
 import "./App.scss";
 import "./styles/partials/_global.scss"
 import "./styles/partials/_variables.scss";
+import { useState } from "react";
+
 import Header from "./components/Header/Header";
-import Main from "./components/Main/Main";
 import HeroVideo from "./components/HeroVideo/HeroVideo";
+import Main from "./components/Main/Main";
+
+import videoDetails from "../src/data/video-details.json";
+// import videos from "../src/data/videos.json";
+
+// console.log(videoDetails[0])
 
 function App() {
+
+  const [currentVideo, setCurrentVideo] = useState(videoDetails[0]); 
+
+  function updateCurrentVideo(id) {
+    console.log("App")
+    // console.log(currentVideo);
+    // console.log(videoDetails.find((video) => video.id === id));
+    setCurrentVideo(videoDetails.find((video) => video.id === id));
+  }
 
   return (
     <div className="App">
       <Header />
-      <HeroVideo/>
-      <Main />
+      <HeroVideo currentVideo={currentVideo}/>
+      <Main updateCurrentVideo={updateCurrentVideo} currentVideo={currentVideo}/>
     </div>
   );
 }

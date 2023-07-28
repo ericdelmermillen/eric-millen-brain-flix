@@ -15,33 +15,21 @@ import likesIcon from "../../assets/images/Icons/likes.svg"
 import commentIcon from "../../assets/images/Icons/add_comment.svg"
 
 
-// let commentDate = new Date(videoDetails[0].comments[0].timestamp).toLocaleDateString(
-//   "en-US", {
-//       year: "numeric",
-//       month: "2-digit",
-//       day: "2-digit"
-//     })
+function Main({updateCurrentVideo, currentVideo}) {
+  // const [currentVideo, setCurrentVideo] = useState(videoDetails[0]); 
 
-
-function Main() {
-  const [currentVideo, setCurrentVideo] = useState(videoDetails[0]); 
 
 
   return (
     <main className="main">
-      <h1 className="main__heading">Main</h1>
-
       <HeroDetails currentVideo={currentVideo} viewsIcon={viewsIcon} likesIcon={likesIcon}/>
 
       <NewComment commentIcon={commentIcon} avatar={avatar}/>
-
+    
       <HeroComments currentVideo={currentVideo} avatar={avatar}/>
 
-      <NextVideos videos={videos}/>
 
-
-
-
+      <NextVideos videos={videos} updateCurrentVideo={updateCurrentVideo}/> 
     </main>
   )
 }

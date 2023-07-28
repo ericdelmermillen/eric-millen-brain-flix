@@ -4,7 +4,6 @@
 
 .main {
   border: 5px solid green!important;
-  min-height: 100vh;
 
   @media (min-width:$desktop-width) {
     position: relative;
@@ -31,7 +30,6 @@
 }
 
 
-
 .comment__date {
   border: 2px solid red;
   margin-left: auto;
@@ -40,7 +38,6 @@
 // Next Videos
 .next-videos {
   border: 2px solid red;
-  min-height: 100vh;
 
   @media (min-width: $desktop-width){
     position: absolute;
