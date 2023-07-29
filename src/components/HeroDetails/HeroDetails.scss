@@ -2,30 +2,71 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-
-.hero__details {
-  border-bottom: 5px dotted #000; 
+.hero {
+  &__details {
+  // border: 5px solid red;
+  @include padding-block;
+  @include padding-inline;
   
-  @media (min-width: $desktop-width) {
+    @media (min-width: $desktop-width) {
+      width: 50%;
+    }
+  }
+
+  &__heading {
+    @include padding-block;
+    border-bottom: 2px solid $Silver;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid $Silver;
+  }
+
+  &__header {
+    @include padding-block;
+    @include padding-inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__header-channel {
+    font-weight: 700;
+  }
+  
+  &__header-date {
+    color: silver;
+  }
+
+  &__numbers {
     width: 50%;
   }
-}
+  
+  &__icon {
+    margin-right: 1rem;
+  }
 
-.hero__header {
-  display: flex;
-}
+  &__views, 
+  &__likes {
+    display: flex;
+    @include padding-inline;
+    @include padding-block;
+    color: silver;
+  }
+  
+  &__description {
+    @include padding-inline;
+    @include padding-block;
+    line-height: 1.8;
+  }
 
-.hero__stats {
-  border: 2px solid red;
-  display: flex;
-}
-
-.hero__views {
-  display: flex;
-  border: 2px solid blue;
-}
-
-.hero__likes {
-  display: flex;
-  border: 2px solid green;
+  &__comment-count {
+    @include padding-inline;
+    @include padding-block;
+    font-weight: bold;
+  }
 }
