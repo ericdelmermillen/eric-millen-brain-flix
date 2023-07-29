@@ -8,11 +8,13 @@ function NextVideos({videos, updateCurrentVideo, currentVideoId}) {
       <h2 className="next-videos__heading">NEXT VIDEOS</h2>
       
       {videos
-      .filter(video => video.id !== currentVideoId)
-      .map((video) => (
-        <Video key={video.id} video={video} updateCurrentVideo=   
-          {updateCurrentVideo}
-        />
+        .filter(video => video.id !== currentVideoId)
+        .map((video) => (
+            <Video 
+              key={video.id} 
+              video={video} 
+              updateCurrentVideo= {updateCurrentVideo}
+            />
         ))}
       {/* 
       <Video key={Math.floor(Math.random * 100)} video={"./"}/> 
