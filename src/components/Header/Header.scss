@@ -39,7 +39,7 @@
 }
 
 .header__container .avatar {
-  border: 5px solid blue!important;
+  margin-bottom: 2rem;
   
   @media (min-width: $tablet-width) {
     order: 1;

@@ -8,9 +8,9 @@
   @include padding-block;
   @include padding-inline;
   
-    @media (min-width: $desktop-width) {
-      width: 50%;
-    }
+    // @media (min-width: $desktop-width) {
+    //   width: 50%;
+    // }
   }
 
   &__heading {

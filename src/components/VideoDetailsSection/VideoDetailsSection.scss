@@ -2,12 +2,11 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-// Comment List
-.hero__comments {
-  border: 4px solid blue;
-}
-
-.hero__comment-text {
-  border: 2px solid purple;
+.video-details {
+  border: 5px solid red;
+  
+  @media (min-width: $desktop-width) {
+    width: 70%;  
+  }
 }
 

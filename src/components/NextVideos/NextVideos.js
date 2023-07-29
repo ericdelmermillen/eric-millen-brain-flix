@@ -11,7 +11,6 @@ function NextVideos({videos, updateCurrentVideo}) {
         <Video key={video.id} video={video} updateCurrentVideo={updateCurrentVideo}/>
       ))}
     </section>
-  )
-}
+  )}
 
 export default NextVideos

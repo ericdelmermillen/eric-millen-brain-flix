@@ -4,9 +4,11 @@
 
 // HeroForm
 .hero__new-comment {
-  border: 2px solid blue;
   display: flex;
   justify-content: space-between;
+  @include padding-block;
+  @include padding-inline;
+  border-bottom: 2px solid $Silver;
   
   // @media (min-width: $desktop-width) {
   //   width: 50%;  
@@ -14,12 +16,40 @@
 }
 
 .hero__form {
-  border: 2px solid red;
   display: flex;
   flex-direction: column;
   width: 1000px;
+  margin-left: 1rem;
+}
+
+.hero__comment-label {
+  color: $Silver;
+}
+
+.hero__comment-input {
+  @include margin-block; 
+  border: 1px solid $Mercury;
+  resize: none;
+  width: 100%;
+  @include padding-block;
+  @include padding-inline;
+  font-family: inherit;
+  min-height: 10rem;
+  border-radius: 4px;
+  font-size: 1rem;
+
+  &:focus {
+    border: 1px solid $BrainFlixBlue;
+  }
+  
+  &:invalid {
+    border: 1px solid $Invalid;
+  }
 }
 
 .avatar {
   order: 0;
+  @include margin-block(
+    $margin-top-mobile: 2.25rem
+  );
 }
