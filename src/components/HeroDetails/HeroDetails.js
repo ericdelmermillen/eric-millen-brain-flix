@@ -11,17 +11,13 @@ function HeroDetails({currentVideo, viewsIcon, likesIcon}) {
       })
 
   return (
-    
     <section className="hero__details">
-
       <h2 className="hero__heading">{title}</h2>
-
       <div className="hero__stats">
         <header className="hero__header">
           <p className="hero__header-channel">By {channel}</p>
           <p className="hero__header-date">{date}</p>
         </header>
-
         <div className="hero__numbers">
           <div className="hero__views">
             <img className="hero__icon" src={viewsIcon} alt="" />

@@ -12,9 +12,13 @@ import HeroComments from "../HeroComments/HeroComments";
 function VideoDetailsSection({updateCurrentVideo, currentVideo}) {
   return (
     <section className="video-details">
+
       <HeroDetails currentVideo={currentVideo} viewsIcon={viewsIcon} likesIcon={likesIcon}/>
+
       <NewComment commentIcon={commentIcon} avatar={avatar}/>
+
       <HeroComments currentVideo={currentVideo} avatar={avatar}/>
+      
     </section>
     
   )}

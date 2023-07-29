@@ -7,33 +7,42 @@
   // border: 5px solid red;
   @include padding-block;
   @include padding-inline;
-  
-    // @media (min-width: $desktop-width) {
-    //   width: 50%;
-    // }
   }
 
   &__heading {
-    @include padding-block;
-    border-bottom: 2px solid $Silver;
+    @include padding-block($padding-bottom-tablet: 0);
+    border-bottom: 1px solid $Silver;
     font-size: 2rem;
     line-height: 1.5;
-  }
 
+    @media (min-width: $tablet-width) {
+      border-bottom: none;
+    }
+  }
+  
   &__stats {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid $Silver;
+    border-bottom: 1px solid $Silver;
+    
+    // @media (min-width: $tablet-width) {
+    //   border: 2px solid blue;
+    // }
   }
-
+  
   &__header {
     @include padding-block;
     @include padding-inline;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    
+    @media (min-width: $tablet-width) {
+      flex-direction: row;
+      @include gap;
+    }
   }
-
+  
   &__header-channel {
     font-weight: 700;
   }
@@ -41,9 +50,15 @@
   &__header-date {
     color: silver;
   }
-
+  
   &__numbers {
+    // background: red;
     width: 50%;
+
+    @media (min-width: $tablet-width) {
+      display: flex;
+      width: auto;
+    }
   }
   
   &__icon {
@@ -53,8 +68,8 @@
   &__views, 
   &__likes {
     display: flex;
-    @include padding-inline;
     @include padding-block;
+    @include padding-inline;
     color: silver;
   }
   
@@ -66,7 +81,7 @@
 
   &__comment-count {
     @include padding-inline;
-    @include padding-block;
+    @include padding-block($padding-bottom-tablet: 0);
     font-weight: bold;
   }
 }

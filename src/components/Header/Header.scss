@@ -10,22 +10,30 @@
       $padding-bottom-tablet: 0,
       $padding-bottom-desktop: 0
     );
+    
     @include padding-inline;
     align-items: center;
-    justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     max-width: 1280px;
     width: 100%;
     
     @media (min-width: $tablet-width) {
       align-items: center;
-      justify-content: center;
-      flex-wrap: nowrap;
       flex-direction: row;
+      flex-wrap: nowrap;
       height: 6rem;
+      justify-content: center;
       padding-top: 0;
       width: 100%;
+      }
+
+      .btn {
+        @include margin-block(
+          $margin-top-mobile: 0
+        );
+        @include margin-inline;
       }
     }
   
@@ -36,34 +44,30 @@
     @media (min-width: $tablet-width) {
       margin: 0;  
     }
+    @media (min-width: $desktop-width) {
+      margin-left: 8rem;  
+    }
   }
 }
 
 .header__container .avatar {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
   
   @media (min-width: $tablet-width) {
     order: 1;
-    // order: 0;
+  }
+  
+  @media (min-width: $desktop-width) {
+    margin-right: 8rem;
   }
 }
 
 .search {
   border-radius: 4px;
+  margin-top: 0;
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
-
   }
 }
-
-.btn {
-  margin-top: 0;
-  
-  @media (min-width: $tablet-width) {
-    @include margin-block;
-    @include margin-inline;
-  }
-}
-  
-  
