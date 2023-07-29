@@ -20,7 +20,6 @@ function CommentCard({ comment }) {
         <p>{commentText}</p> 
       </div>
     </div>
-  );
-}
+  )}
 
 export default CommentCard;

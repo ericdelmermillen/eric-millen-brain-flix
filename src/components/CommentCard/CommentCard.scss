@@ -3,23 +3,35 @@
 @use "../../styles/partials/variables" as *;
 
 .comment {
-  border: 2px solid green;
+  @include padding-block;
+  @include padding-inline;
+  border-bottom: 2px solid $Silver;
   display: flex;
   width: 100%;
 
   &__name {
-    border: 2px solid blue;
+    @include margin-block($margin-top-mobile: 0);
     display: flex;
+    font-weight: 600;
     width: 100%; 
   }
   
   &__text {
+    line-height: 1.75;
     width: 100%;
-    border: 2px solid green;
+    // border: 2px solid green;
   }
   
   &__date {
-    border: 2px solid red;
+    // border: 2px solid red;
+    color: $Silver;
     margin-left: auto;
+  }
+
+  .avatar {
+    // border: 2px solid red;
+    @include margin-block($margin-top-mobile: 0.25rem);
+    // @include margin-inline;
+    margin-right: 1rem;
   }
 }

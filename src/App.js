@@ -8,9 +8,6 @@ import HeroVideo from "./components/HeroVideo/HeroVideo";
 import Main from "./components/Main/Main";
 
 import videoDetails from "../src/data/video-details.json";
-// import videos from "../src/data/videos.json";
-
-// console.log(videoDetails[0])
 
 function App() {
 
@@ -18,8 +15,6 @@ function App() {
 
   function updateCurrentVideo(id) {
     console.log("App")
-    // console.log(currentVideo);
-    // console.log(videoDetails.find((video) => video.id === id));
     setCurrentVideo(videoDetails.find((video) => video.id === id));
   }
 
@@ -29,13 +24,11 @@ function App() {
       <HeroVideo currentVideo={currentVideo}/>
       <Main updateCurrentVideo={updateCurrentVideo} currentVideo={currentVideo}/>
     </div>
-  );
-}
+  )}
 
 export default App;
 
 // Questions
-// Make class setable on calling the component via passing in Block part of name to amend to __Element? *** Search component
 // Should all componets end up with the same class or should they have classes that refelect their BEM use within their parent? (.header__search vs just .search ?)
 // If they get the same class everywhere they are used, how do you selected them to change them where they are being used without a complex selector? 
 // If they get unique classses relative to their BEM functionality within the parent how do you apply the base classes without applying them in every place they are used?

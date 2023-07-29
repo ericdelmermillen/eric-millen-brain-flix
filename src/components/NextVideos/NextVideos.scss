@@ -6,10 +6,16 @@
 // Next Videos
 .next-videos {
   border: 2px solid blue;
+  @include margin-block;
+  @include margin-inline;
 
   @media (min-width: $desktop-width){
     width: 50%;
   }
+}
+
+.next-videos__heading {
+  color: $Silver;
 }
 
 // .video__list {
