@@ -2,40 +2,67 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.header__container {
-  border: 2px solid red;
-  @include padding-block(
-    $padding-bottom-mobile: 0,
+.header {
+
+  &__container {
+    @include padding-block(
+      $padding-bottom-mobile: 0,
     $padding-bottom-tablet: 0,
     $padding-bottom-desktop: 0
-  );
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  max-width: 1280px;
-  width: 100%;
+    );
+    @include padding-inline;
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1280px;
+    width: 100%;
+    
+    @media (min-width: $tablet-width) {
+      align-items: center;
+      justify-content: center;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      width: 100%;
+      padding-top: 0;
+      }
+    }
+  
+  &__logo {
+    margin: 0 auto;  
+    display: block;
+    
+    @media (min-width: $tablet-width) {
+      margin: 0;  
+    }
+  }
+}
+
+.header__container .avatar {
+  border: 5px solid blue!important;
   
   @media (min-width: $tablet-width) {
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    }
+    order: 1;
+    // order: 0;
   }
+}
 
-  .avatar {
-    border: 2px solid blue;
-    @media (min-width: $tablet-width) {
-      order: 1;
-    }
-  }
-
-.header__search {
+.search {
   border-radius: 4px;
-  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+
+  }
 }
 
-.header__logo {
-  margin: 0 auto;  
+.btn {
+  margin-top: 0;
+  
+  @media (min-width: $tablet-width) {
+    @include margin-block;
+    @include margin-inline;
+  }
 }
+  
+  

@@ -14,7 +14,7 @@ function Header() {
   backgroundRepeat: "no-repeat",
   backgroundSize: "20px",
   paddingLeft: "30px",
-  width: `calc(100% - 50px)`
+  // width: `calc(100% - 50px)`
 };
   
   return (
@@ -24,7 +24,6 @@ function Header() {
       <Avatar avatar={avatar}/>
       <Button buttonText="UPLOAD" iconSource={uploadIcon} iconAlt="upload icon"/>
     </div>
-  )
-}
+  )}
 
 export default Header

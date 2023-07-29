@@ -4,7 +4,23 @@
 
 .search {
   @include margin-block;
-  border: 2px solid green;
+  border: 1px solid $Mercury;
+  border-radius: 4px;
   display: inline-block;
+  width: calc(100% - (40px + 5%));
   height: 40px;
+
+  @media (min-width: $tablet-width) {
+    width: 240px;
+
+  }
+
+  &:focus {
+    border: 1px solid $BrainFlixBlue;
+  }
+  
+  &:invalid {
+    border: 1px solid $Invalid;
+
+  }
 }

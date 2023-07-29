@@ -4,12 +4,21 @@
 
 .btn {
   @include btn;
-  @include margin-inline;
+  // @include margin-inline;
   @include margin-block;
   align-items: center;
   display: flex;
   justify-content: center;
   position: relative;
+  width: 100%;
+   
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    // justify-content: space-between;
+    width: 140px;
+    }
   
   &__icon {
     justify-self: flex-start;
