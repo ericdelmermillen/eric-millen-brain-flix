@@ -3,12 +3,12 @@
 @use "../../styles/partials/variables" as *;
 
 .header {
-
   &__container {
+    
     @include padding-block(
       $padding-bottom-mobile: 0,
-    $padding-bottom-tablet: 0,
-    $padding-bottom-desktop: 0
+      $padding-bottom-tablet: 0,
+      $padding-bottom-desktop: 0
     );
     @include padding-inline;
     align-items: center;
@@ -23,8 +23,9 @@
       justify-content: center;
       flex-wrap: nowrap;
       flex-direction: row;
-      width: 100%;
+      height: 6rem;
       padding-top: 0;
+      width: 100%;
       }
     }
   

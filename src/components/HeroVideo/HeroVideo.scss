@@ -4,20 +4,26 @@
 
 .hero {
   &__video-container {
-    background: #000;
+    background: $BrainFlix-DarkBlack;
     max-width: $desktop-width;
     height: 50vh;
-  }
-
+    
+    @media (min-width: $tablet-width) {
+      height: 80vh;
+      }
+    }
+    
   &__video {
-    width: calc(50vh * 16 / 9); /* Width is 16:9 relative to the parent's height */
-    height: 100%; /* Height is 100% of the parent's height (50vh) */
-    object-fit: cover;
-    margin: 0 auto;
     display: block;
-
-    @media (width: $tablet-width) {
-
+    height: 100%; 
+    max-width: 100%;
+    margin: 0 auto;
+    object-fit: cover;
+    width: calc(50vh * 16 / 9); 
+    
+    @media (min-width: $tablet-width) {
+      max-width: 100%;
+      width: calc((80vh - 6rem) * 16 / 9); 
     }
   }
 }
