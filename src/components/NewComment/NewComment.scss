@@ -2,16 +2,15 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-// HeroForm
 .hero {
 
   &__new-comment {
     @include padding-block(
       $padding-bottom-tablet: 24px,
-      $padding-bottom-desktop: 24px,
       $padding-top-tablet: 24px,
+      $padding-bottom-desktop: 24px,
       $padding-top-desktop: 24px,
-      );
+    );
     @include margin-inline;
     border-bottom: 1px solid $Mercury;
     display: flex;
@@ -22,6 +21,12 @@
         $margin-top-mobile: 2.25rem,
         $margin-top-desktop: 1.5rem
       );
+      @media (min-width: $tablet-width) {
+        margin-left: 1.5rem;
+      }
+      @media (min-width: $desktop-width) {
+        margin-left: 0;
+      }
     }
   }
   
@@ -29,17 +34,28 @@
     display: flex;
     flex-direction: column;
     margin-left: 1rem;
+    width: 100%;
     
     @media (min-width: $tablet-width) {
       flex-direction: row;
-      width: 100%;
       justify-content: space-between;
+      width: 100%;
+
+      .btn {
+        margin-bottom: 24px;
+        margin-top: 24px;
+        width: 100%;
+
+        @media (min-width: $tablet-width) {
+          width: 150px;
+        }
+      }
     }
   }
   
   &__form-inner {
-    width: 100%;
     margin-right: 2rem;
+    width: 100%;
   }
 
   &__comment-label {
@@ -54,9 +70,8 @@
     @include padding-block(
       $padding-bottom-tablet: 0,
       $padding-top-tablet: 0.5rem, 
-      $padding-top-desktop: 0.5rem, 
-      $padding-bottom-desktop: 0
-      // $padding-bottom-desktop: 0,
+      $padding-bottom-desktop: 0,
+      $padding-top-desktop: 0.5rem
     );
     @include padding-inline;
     background: $Alabaster;
@@ -75,10 +90,12 @@
   
     &:focus {
       border: 1px solid $BrainFlixBlue;
+      outline: none;
     }
     
     &:invalid {
       border: 1px solid $Invalid;
+      outline: none;
     }
   }
 }
@@ -86,5 +103,9 @@
 .hero__form .btn {
   margin-bottom: 24px;
   margin-top: 24px;
-  // outline: 4px solid red;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 150px;
+  }
 }

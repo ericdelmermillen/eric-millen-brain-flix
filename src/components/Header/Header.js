@@ -19,11 +19,13 @@ function Header() {
   
   return (
     <div className="header__container">
-      <img className="header__logo" src={logo} alt="BrainFlix Logo"/>
+      <a href="/" className="header__link">
+        <img className="header__logo" src={logo} alt="BrainFlix Logo"/>
+      </a>
 
       <Search searchIconStyle={searchIconStyle} placeholder="Search"/>
 
-      <Avatar avatar={avatar}/>
+      <Avatar avatar={avatar} ariaDescription={"profile icon for Mohan"}/>
 
       <Button buttonText="UPLOAD" iconSource={uploadIcon} iconAlt="upload icon"/>
       

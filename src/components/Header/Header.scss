@@ -4,6 +4,8 @@
 
 .header {
   &__container {
+    max-width: $desktop-width;
+    margin: 0 auto;
     
     @include padding-block(
       $padding-bottom-mobile: 0,
@@ -16,7 +18,6 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1280px;
     width: 100%;
     
     @media (min-width: $tablet-width) {
@@ -33,14 +34,16 @@
           $margin-top-mobile: 0,
           $margin-bottom-tablet: 1.5rem
         );
-        @include margin-inline;
+
+        @media (min-width: $tablet-width) {
+          @include margin-inline;
+        }
       }
     }
   
-  &__logo {
-    margin: 0 auto;  
-    display: block;
-    
+  &__link {
+    margin: 0 auto;
+
     @media (min-width: $tablet-width) {
       margin: 0;  
     }

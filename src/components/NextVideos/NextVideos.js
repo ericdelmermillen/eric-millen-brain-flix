@@ -1,4 +1,5 @@
 import "./NextVideos.scss";
+
 import Video from "../Video/Video";
 
 function NextVideos({videos, updateCurrentVideo, currentVideoId}) {
@@ -16,10 +17,7 @@ function NextVideos({videos, updateCurrentVideo, currentVideoId}) {
               updateCurrentVideo= {updateCurrentVideo}
             />
         ))}
-      {/* 
-      <Video key={Math.floor(Math.random * 100)} video={"./"}/> 
-      // Dummy Video for testing default background color
-      */}
+
     </section>
   )}
 

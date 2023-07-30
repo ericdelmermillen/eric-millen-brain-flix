@@ -1,13 +1,13 @@
 import "./VideoDetailsSection.scss"
 
-import viewsIcon from "../../assets/images/Icons/views.svg";
-import likesIcon from "../../assets/images/Icons/likes.svg";
-import commentIcon from "../../assets/images/Icons/add_comment.svg"
 import avatar from "../../assets/images/Images/Mohan-muruge.jpg";
+import commentIcon from "../../assets/images/Icons/add_comment.svg"
+import likesIcon from "../../assets/images/Icons/likes.svg";
+import viewsIcon from "../../assets/images/Icons/views.svg";
 
+import HeroComments from "../HeroComments/HeroComments";
 import HeroDetails from "../HeroDetails/HeroDetails";
 import NewComment from "../NewComment/NewComment";
-import HeroComments from "../HeroComments/HeroComments";
 
 function VideoDetailsSection({updateCurrentVideo, currentVideo}) {
   return (
@@ -15,7 +15,7 @@ function VideoDetailsSection({updateCurrentVideo, currentVideo}) {
 
       <HeroDetails currentVideo={currentVideo} viewsIcon={viewsIcon} likesIcon={likesIcon}/>
 
-      <NewComment commentIcon={commentIcon} avatar={avatar}/>
+      <NewComment avatar={avatar} commentIcon={commentIcon} />
 
       <HeroComments currentVideo={currentVideo} avatar={avatar}/>
 

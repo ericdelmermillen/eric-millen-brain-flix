@@ -11,7 +11,7 @@ function CommentCard({ comment }) {
   });
 
   return (
-    <div className="comment">
+    <div className="comment" role="listitem">
       <Avatar />
       <div className="comment__text">
         <p className="comment__name">{name}

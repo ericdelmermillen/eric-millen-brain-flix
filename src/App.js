@@ -7,21 +7,25 @@ import HeroVideo from "./components/HeroVideo/HeroVideo";
 import Main from "./components/Main/Main";
 
 function App() {
-
-  const [currentVideo, setCurrentVideo] = useState(videoDetails[0]); 
+  const defaultVideo = videoDetails[0];
+  const [currentVideo, setCurrentVideo] = useState(defaultVideo); 
 
   function updateCurrentVideo(id) {
     setCurrentVideo(videoDetails.find((video) => video.id === id));
   }
 
   return (
-    <div className="App">
+    <div className="app">
 
-      <Header />
+      <div className="app__inner-container">
 
-      <HeroVideo currentVideo={currentVideo}/>
+        <Header />
 
-      <Main updateCurrentVideo={updateCurrentVideo} currentVideo={currentVideo}/>
+        <HeroVideo currentVideo={currentVideo}/>
+
+        <Main updateCurrentVideo={updateCurrentVideo} currentVideo={currentVideo}/>
+        
+      </div>
 
     </div>
   )}

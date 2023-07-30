@@ -11,7 +11,7 @@ function HeroDetails({currentVideo, viewsIcon, likesIcon}) {
       })
 
   return (
-    <section className="hero__details">
+    <article className="hero__details">
       <h2 className="hero__heading">{title}</h2>
       <div className="hero__stats">
         <header className="hero__header">
@@ -20,11 +20,11 @@ function HeroDetails({currentVideo, viewsIcon, likesIcon}) {
         </header>
         <div className="hero__numbers">
           <div className="hero__views">
-            <img className="hero__icon" src={viewsIcon} alt="" />
+            <img className="hero__icon" src={viewsIcon} alt="views icon" />
             <p>{views}</p>
           </div>
           <div className="hero__likes">
-            <img className="hero__icon" src={likesIcon} alt="" />
+            <img className="hero__icon" src={likesIcon} alt="likes icon" />
             <p>{likes}</p>
           </div>
         </div>
@@ -33,7 +33,7 @@ function HeroDetails({currentVideo, viewsIcon, likesIcon}) {
 
       <p className="hero__description">{description}</p>
       <p className="hero__comment-count">{comments.length} Comments</p> 
-    </section>
+    </article>
   )}
 
 export default HeroDetails;

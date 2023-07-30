@@ -4,7 +4,6 @@
 
 .btn {
   @include btn;
-  // @include margin-inline;
   @include margin-block;
   align-items: center;
   display: flex;

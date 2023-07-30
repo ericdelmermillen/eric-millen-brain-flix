@@ -5,6 +5,8 @@
 .main {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
+  max-width: $desktop-width;
   
   @media (min-width: $desktop-width) {
     flex-direction: row;

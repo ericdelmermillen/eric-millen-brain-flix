@@ -2,9 +2,11 @@
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/variables" as *;
 
-.App {
+.app {
   margin: 0 auto;
-  max-width: $desktop-width;
-  min-height: 100vh;
   width: 100%;
+  
+  &inner-container {
+    max-width: $desktop-width;
+  }
 }

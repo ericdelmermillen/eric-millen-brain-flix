@@ -6,7 +6,7 @@ function HeroComments({ currentVideo }) {
   const {comments} = currentVideo;
 
   return (
-    <section className="hero__comments">
+    <section className="hero__comments" role="list">
       {comments.map((comment) => 
         <CommentCard
           key={comment.id} 

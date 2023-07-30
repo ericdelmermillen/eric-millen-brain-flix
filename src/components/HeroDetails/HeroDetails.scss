@@ -10,8 +10,9 @@
 
   &__heading {
     @include padding-block(
-      $padding-bottom-tablet: 0,$padding-bottom-desktop: 0
-      );
+      $padding-bottom-tablet: 0,
+      $padding-bottom-desktop: 0
+    );
     border-bottom: 1px solid $Mercury;
     font-size: 2rem;
     line-height: 1.5;
@@ -78,7 +79,9 @@
   &__comment-count {
     @include padding-inline;
     @include padding-block(
-      $padding-bottom-mobile: 0,$padding-bottom-tablet: 0, $padding-bottom-desktop: 0
+      $padding-bottom-mobile: 0,
+      $padding-bottom-tablet: 0, 
+      $padding-bottom-desktop: 0
     );
     font-weight: bold;
   }

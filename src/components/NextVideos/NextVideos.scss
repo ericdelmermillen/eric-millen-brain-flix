@@ -2,14 +2,16 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-
-// Next Videos
 .next-videos {
-  @include margin-block($margin-top-mobile: 0);
-  @include margin-inline;
-
+  @include margin-block(
+    $margin-top-mobile: 0
+  );
+  @include margin-inline(
+    $margin-right-desktop: 6rem
+  );
+  
   @media (min-width: $desktop-width){
-    width: 50%;
+    width: 35%;
   }
 }
 

@@ -1,7 +1,7 @@
 import "./Video.scss"
 
 function Video({video, updateCurrentVideo}) {
-  const {title, channel, image, id} = video;
+  const { channel, id, image, title} = video;
 
   return (
       <div className="video" onClick={() => updateCurrentVideo(id)}>
