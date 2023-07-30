@@ -3,10 +3,10 @@
 @use "../../styles/partials/variables" as *;
 
 .video-details {
-  border: 5px solid red;
   
   @media (min-width: $desktop-width) {
-    width: 70%;  
+    padding-left: 5rem;
+    width: 100%;
   }
 }
 

@@ -3,14 +3,21 @@
 @use "../../styles/partials/variables" as *;
 
 .comment {
-  @include padding-block;
-  @include padding-inline;
-  border-bottom: 2px solid $Silver;
+  @include padding-block(
+    $padding-top-tablet: 0,
+    $padding-top-desktop: 0
+  );
+  @include padding-inline(
+    $padding-left-desktop: 0
+  );
+  border-bottom: 1px solid $Mercury;
   display: flex;
   width: 100%;
 
   &__name {
-    @include margin-block($margin-top-mobile: 0);
+    @include margin-block(
+      $margin-top-mobile: 
+    0);
     display: flex;
     font-weight: 600;
     width: 100%; 
@@ -19,19 +26,19 @@
   &__text {
     line-height: 1.75;
     width: 100%;
-    // border: 2px solid green;
   }
   
   &__date {
-    // border: 2px solid red;
     color: $Silver;
     margin-left: auto;
+    font-weight: normal;
   }
 
   .avatar {
-    // border: 2px solid red;
-    @include margin-block($margin-top-mobile: 0.25rem);
-    // @include margin-inline;
+    @include margin-block(
+      $margin-top-mobile: 0.25rem,
+      $margin-top-tablet: 30px
+    );
     margin-right: 1rem;
   }
 }

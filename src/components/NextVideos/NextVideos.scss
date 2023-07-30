@@ -5,8 +5,7 @@
 
 // Next Videos
 .next-videos {
-  // border: 2px solid blue;
-  @include margin-block;
+  @include margin-block($margin-top-mobile: 0);
   @include margin-inline;
 
   @media (min-width: $desktop-width){
@@ -15,10 +14,7 @@
 }
 
 .next-videos__heading {
+  @include margin-block;
   color: $Silver;
 }
-
-// .video__list {
-//   border: 2px solid blue;
-// }
 

@@ -18,9 +18,9 @@ function VideoDetailsSection({updateCurrentVideo, currentVideo}) {
       <NewComment commentIcon={commentIcon} avatar={avatar}/>
 
       <HeroComments currentVideo={currentVideo} avatar={avatar}/>
-      
+
     </section>
     
   )}
 
-export default VideoDetailsSection
+export default VideoDetailsSection;

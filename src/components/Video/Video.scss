@@ -3,29 +3,35 @@
 @use "../../styles/partials/variables" as *;
 
 .video {
-  display: flex;
   @include margin-block;
-  // border: 2px solid green;
-  height: 120px;
+  display: flex;
+  min-height: 100px;
+  max-width: 550px;
   
   &__thumbnail {
     flex: 0 0 100%;
-    // border: 2px solid red;
+    border-radius: 4px;
     max-width: 35%;
     min-height: 100%;
     margin-right: 1rem;
+    max-height: 100px;
     object-fit: cover;
     object-position: center center;
     background: $Mercury;
+
+    @media (min-width: $tablet-width) {
+      height: 100px;
+    }
   }
   
   &__title {
-    margin-bottom: 0.5rem;
-    line-height: 1.5;
+    @include sub-header($font-size-mobile: 1.2rem, $line-height-mobile: 1.5, $font-size-tablet: 1.5rem, $line-height-tablet: 1.5);
   }
 
   &__text {
-    // border: 2px solid blue;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
   }
 }

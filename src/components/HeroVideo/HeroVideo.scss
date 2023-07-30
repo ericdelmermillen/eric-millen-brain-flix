@@ -5,14 +5,16 @@
 .hero {
   &__video-container {
     background: $BrainFlix-DarkBlack;
-    max-width: $desktop-width;
     height: 50vh;
     
     @media (min-width: $tablet-width) {
-      height: 80vh;
+      height: calc(80vh - 6rem);
+      }
+    @media (min-width: $desktop-width) {
+      height: calc(100vh - 6rem);
       }
     }
-    
+
   &__video {
     display: block;
     height: 100%; 
@@ -24,6 +26,10 @@
     @media (min-width: $tablet-width) {
       max-width: 100%;
       width: calc((80vh - 6rem) * 16 / 9); 
+    }
+    @media (min-width: $desktop-width) {
+      max-width: 100%;
+      width: calc((100vh - 6rem) * 16 / 9); 
     }
   }
 }

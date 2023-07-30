@@ -23,15 +23,15 @@
       align-items: center;
       flex-direction: row;
       flex-wrap: nowrap;
-      height: 6rem;
       justify-content: center;
       padding-top: 0;
       width: 100%;
-      }
+    }
 
       .btn {
         @include margin-block(
-          $margin-top-mobile: 0
+          $margin-top-mobile: 0,
+          $margin-bottom-tablet: 1.5rem
         );
         @include margin-inline;
       }
@@ -45,7 +45,7 @@
       margin: 0;  
     }
     @media (min-width: $desktop-width) {
-      margin-left: 8rem;  
+      margin-left: 5rem;  
     }
   }
 }
@@ -59,13 +59,14 @@
   }
   
   @media (min-width: $desktop-width) {
-    margin-right: 8rem;
+    margin-right: 5rem;
   }
 }
 
 .search {
   border-radius: 4px;
   margin-top: 0;
+  margin-bottom: 20px;
 
   @media (min-width: $tablet-width) {
     margin-left: auto;

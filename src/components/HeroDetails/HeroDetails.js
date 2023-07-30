@@ -1,7 +1,7 @@
 import "./HeroDetails.scss"; 
 
 function HeroDetails({currentVideo, viewsIcon, likesIcon}) {
-  const {title, channel, description, views, likes, comments, timestamp} = currentVideo;
+  const {channel, comments, description, likes, timestamp, title, views} = currentVideo;
 
   let date = new Date(timestamp).toLocaleDateString(
     "en-US", {
