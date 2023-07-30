@@ -7,12 +7,11 @@ function Video({video, updateCurrentVideo}) {
       <div className="video" onClick={() => updateCurrentVideo(id)}>
         <img className="video__thumbnail" src={image} alt="" />
         <div className="video__text">
-          <h3 className="video__title">{
+          <h4 className="video__title">{
             title.length > 40 
-              ? title.slice(0, 40) + "..."
+              ? title.slice(0, 33) + "..."
               : title
-          
-          }</h3>
+          }</h4>
           <p className="video__channel">{channel}</p>
         </div>
       </div>
