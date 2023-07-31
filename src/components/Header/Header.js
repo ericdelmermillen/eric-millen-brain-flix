@@ -1,8 +1,8 @@
-import "./Header.scss"
-import uploadIcon from "../../assets/images/Icons/upload.svg"
-import logo from "../../assets/images/Logo/BrainFlix-logo.svg"
-import searchIcon from "../../assets/images/Icons/search.svg"
-import avatar from "../../assets/images/Images/Mohan-muruge.jpg"
+import "./Header.scss";
+import uploadIcon from "../../assets/images/Icons/upload.svg";
+import logo from "../../assets/images/Logo/BrainFlix-logo.svg";
+import searchIcon from "../../assets/images/Icons/search.svg";
+import avatar from "../../assets/images/Images/Mohan-muruge.jpg";
 
 import Search from "../Search/Search";
 import Avatar from "../Avatar/Avatar";
@@ -23,13 +23,13 @@ function Header() {
         <img className="header__logo" src={logo} alt="BrainFlix Logo"/>
       </a>
 
-      <Search searchIconStyle={searchIconStyle} placeholder="Search"/>
+      <Search searchIconStyle={searchIconStyle} searchId={"search"} labelText={"Video Search"} placeholder="Search"/>
 
       <Avatar avatar={avatar} ariaDescription={"profile icon for Mohan"}/>
 
       <Button buttonText="UPLOAD" iconSource={uploadIcon} iconAlt="upload icon"/>
       
     </div>
-  )}
+  )};
 
-export default Header
+export default Header;

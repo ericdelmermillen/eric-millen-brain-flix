@@ -1,7 +1,7 @@
 import "./NewComment.scss";
 
-import Button from "../Button/Button";
 import Avatar from "../Avatar/Avatar";
+import Button from "../Button/Button";
 
 function NewComment({avatar, commentIcon}) {
   return (
@@ -20,6 +20,6 @@ function NewComment({avatar, commentIcon}) {
 
       </form>
     </article>
-  )}
+  )};
 
 export default NewComment;

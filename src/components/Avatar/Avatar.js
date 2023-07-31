@@ -2,7 +2,7 @@ import "./Avatar.scss";
 import userPlaceholderImg from "../../assets/images/Images/user-placeholder.png";
 
 function Avatar({avatar, ariaDescription}) {
-  const defaultAvatarDescription = "user avatar"
+  const defaultAvatarDescription = "user avatar";
 
   const divStyle = {
     backgroundImage: `url(${avatar || userPlaceholderImg})`,
@@ -12,8 +12,10 @@ function Avatar({avatar, ariaDescription}) {
   
   return (
       <div className="avatar" style={divStyle} aria-describedby="avatar-description">
-        <span id="avatar-description" style={{ display: 'none' }}>{ariaDescription || defaultAvatarDescription}</span>
+        <span id="avatar-description" style={{ display: 'none' }}>
+          {ariaDescription || defaultAvatarDescription}
+        </span>
       </div>
-  )}
+  )};
 
 export default Avatar;

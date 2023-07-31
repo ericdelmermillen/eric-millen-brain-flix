@@ -2,7 +2,7 @@ import Avatar from "../Avatar/Avatar";
 import "./CommentCard.scss";
 
 function CommentCard({ comment }) {
-  const { name, comment: commentText, timestamp } = comment; 
+  const { comment: commentText, name, timestamp } = comment; 
 
   let formattedTimestamp = new Date(timestamp).toLocaleDateString("en-US", {
     year: "numeric",
@@ -20,6 +20,6 @@ function CommentCard({ comment }) {
         <p>{commentText}</p> 
       </div>
     </div>
-  )}
+  )};
 
 export default CommentCard;

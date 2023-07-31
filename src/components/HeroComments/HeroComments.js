@@ -15,6 +15,6 @@ function HeroComments({ currentVideo }) {
       )}
 
     </section>
-  )}
+  )};
 
 export default HeroComments;

@@ -1,4 +1,4 @@
-import "./VideoDetailsSection.scss"
+import "./VideoDetailsSection.scss";
 
 import avatar from "../../assets/images/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/images/Icons/add_comment.svg"
@@ -21,6 +21,6 @@ function VideoDetailsSection({updateCurrentVideo, currentVideo}) {
 
     </section>
     
-  )}
+  )};
 
 export default VideoDetailsSection;

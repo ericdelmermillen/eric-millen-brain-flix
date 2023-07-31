@@ -7,42 +7,43 @@
   @include padding-block;
   @include padding-inline;
   }
-
+  
   &__heading {
     @include padding-block(
       $padding-bottom-tablet: 0,
       $padding-bottom-desktop: 0
-    );
-    border-bottom: 1px solid $Mercury;
-    font-size: 2rem;
-    line-height: 1.5;
-
-    @media (min-width: $tablet-width) {
-      border-bottom: none;
+      );
+      border-bottom: 0.0625rem solid $Mercury;
+      font-size: 2rem;
+      line-height: 1.5;
+      
+      @media (min-width: $tablet-width) {
+        border-bottom: none;
+      }
     }
-  }
-  
-  &__stats {
-    border-bottom: 1px solid $Mercury;
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  &__header {
-    @include padding-block;
-    @include padding-inline;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     
-    @media (min-width: $tablet-width) {
-      flex-direction: row;
-      @include gap;
+    &__stats {
+      border-bottom: 0.0625rem solid $Mercury;
+      display: flex;
+      justify-content: space-between;
     }
-  }
-  
-  &__header-channel {
-    font-weight: 700;
+    
+    &__header {
+      @include padding-block;
+      @include padding-inline;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
+      @media (min-width: $tablet-width) {
+        flex-direction: row;
+        @include gap;
+      }
+    }
+    
+    &__header-channel {
+      font-weight: 700;
+      white-space: nowrap;
   }
   
   &__header-date {

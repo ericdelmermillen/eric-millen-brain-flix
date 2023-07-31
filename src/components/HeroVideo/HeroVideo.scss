@@ -16,14 +16,12 @@
   }
   
   &__video {
-    // max-width: $desktop-width;
-    max-width: 100%;
     display: block;
     height: 100%; 
     margin: 0 auto;
+    max-width: 100%;
     object-fit: cover;
     width: calc(50vh * 16 / 9); 
-    margin-bottom: 204px;
     
     @media (min-width: $tablet-width) {
       width: calc((80vh - 6rem) * 16 / 9); 

@@ -13,6 +13,6 @@ function Main({updateCurrentVideo, currentVideo}) {
       <NextVideos videos={videos} updateCurrentVideo={updateCurrentVideo} currentVideoId={currentVideo.id}/> 
 
     </main>
-  )}
+  )};
 
-export default Main
+export default Main;

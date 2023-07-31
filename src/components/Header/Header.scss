@@ -12,7 +12,6 @@
       $padding-bottom-tablet: 0,
       $padding-bottom-desktop: 0
     );
-    
     @include padding-inline;
     align-items: center;
     display: flex;
@@ -45,10 +44,12 @@
     margin: 0 auto;
 
     @media (min-width: $tablet-width) {
-      margin: 0;  
+      margin: 0 auto 0 0;  
     }
+
     @media (min-width: $desktop-width) {
       margin-left: 5rem;  
+      display: block;
     }
   }
 }
@@ -67,9 +68,9 @@
 }
 
 .search {
-  border-radius: 4px;
+  border-radius: 0.25rem;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 
   @media (min-width: $tablet-width) {
     margin-left: auto;

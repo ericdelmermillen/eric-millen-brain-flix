@@ -1,14 +1,14 @@
 import "./HeroDetails.scss"; 
 
-function HeroDetails({currentVideo, viewsIcon, likesIcon}) {
+function HeroDetails({currentVideo, likesIcon, viewsIcon }) {
   const {channel, comments, description, likes, timestamp, title, views} = currentVideo;
 
   let date = new Date(timestamp).toLocaleDateString(
     "en-US", {
-        year: "numeric",
+        day: "2-digit",
         month: "2-digit",
-        day: "2-digit"
-      })
+        year: "numeric"
+      });
 
   return (
     <article className="hero__details">
@@ -34,6 +34,6 @@ function HeroDetails({currentVideo, viewsIcon, likesIcon}) {
       <p className="hero__description">{description}</p>
       <p className="hero__comment-count">{comments.length} Comments</p> 
     </article>
-  )}
+  )};
 
 export default HeroDetails;
