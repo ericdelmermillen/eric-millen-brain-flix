@@ -15,19 +15,37 @@ function App() {
   }
 
   return (
+
+    <>
+    {/* BrowserRouter */}
+    <Header />
+    
+    {/* Routes */}
+
     <div className="app">
 
       <div className="app__inner-container">
 
-        <Header />
 
+
+
+        {/* Route */}
         <HeroVideo currentVideo={currentVideo}/>
+        {/* Route */}
 
+
+        {/* Route */}
         <Main updateCurrentVideo={updateCurrentVideo} currentVideo={currentVideo}/>
+        {/* Route */}
         
-      </div>
+      {/* Routes */}
 
+
+      </div>
     </div>
+    {/* BrowserRouter */}
+    </>
+    
   )}
 
 export default App;
