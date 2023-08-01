@@ -1,6 +1,7 @@
 import "./HeroVideo.scss";
 
 function HeroVideo({currentVideo}) {
+
   return (
       <div className="hero__video-container">
         <video 
@@ -13,4 +14,4 @@ function HeroVideo({currentVideo}) {
       </div>
   )};
 
-export default HeroVideo;
+export default HeroVideo; 

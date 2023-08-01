@@ -16,7 +16,7 @@ function NextVideos({videos, updateCurrentVideo, currentVideoId}) {
               video={video} 
               updateCurrentVideo= {updateCurrentVideo}
             />
-        ))};
+        ))}
 
     </section>
   )};

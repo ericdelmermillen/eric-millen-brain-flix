@@ -5,6 +5,7 @@ import VideoDetailsSection from "../VideoDetailsSection/VideoDetailsSection";
 import NextVideos from "../NextVideos/NextVideos";
 
 function Main({updateCurrentVideo, currentVideo}) {
+  
   return (
     <main className="main">
 

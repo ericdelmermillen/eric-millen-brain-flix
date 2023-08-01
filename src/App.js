@@ -1,51 +1,35 @@
-import { useState } from "react";
 import "./App.scss";
 import videoDetails from "../src/data/video-details.json";
 
+import { useState } from "react";
+import { Route, Routes } from 'react-router-dom';
+
 import Header from "./components/Header/Header";
-import HeroVideo from "./components/HeroVideo/HeroVideo";
-import Main from "./components/Main/Main";
+import Home from "./Pages/Home";
+import VideoUpload from "./Pages/VideoUpload";
+
 
 function App() {
   const defaultVideo = videoDetails[0];
   const [currentVideo, setCurrentVideo] = useState(defaultVideo); 
 
   function updateCurrentVideo(id) {
-    setCurrentVideo(videoDetails.find((video) => video.id === id));
+    id === undefined 
+      ? setCurrentVideo(defaultVideo)
+      : setCurrentVideo(videoDetails.find((video) => video.id === id));
   }
 
   return (
-
-    <>
-    {/* BrowserRouter */}
-    <Header />
     
-    {/* Routes */}
-
-    <div className="app">
-
-      <div className="app__inner-container">
-
-
-
-
-        {/* Route */}
-        <HeroVideo currentVideo={currentVideo}/>
-        {/* Route */}
-
-
-        {/* Route */}
-        <Main updateCurrentVideo={updateCurrentVideo} currentVideo={currentVideo}/>
-        {/* Route */}
-        
-      {/* Routes */}
-
-
-      </div>
-    </div>
-    {/* BrowserRouter */}
+    <>
+    <Header currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>
+      <Routes>
+        <Route path="/" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} />
+        <Route path="/upload" element={<VideoUpload/>} />
+      </Routes>
     </>
     
-  )}
+  )};
+
 
 export default App;
