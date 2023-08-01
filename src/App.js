@@ -22,10 +22,18 @@ function App() {
   return (
     
     <>
-    <Header currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>
+    <Header currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo} defaultVideo={defaultVideo}/>
       <Routes>
         <Route path="/" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} />
+        
+        {/* <Route path="/" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} /> */}
+
+        
         <Route path="/upload" element={<VideoUpload/>} />
+
+        <Route path="/:videoId" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} />
+
+        {/* <Route path="/:title" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} /> */}
       </Routes>
     </>
     

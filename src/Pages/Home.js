@@ -1,8 +1,10 @@
+// import { useParams } from "react-router-dom";
 
 import HeroVideo from "../components/HeroVideo/HeroVideo";
 import Main from "../components/Main/Main";
 
 function Home( {currentVideo, updateCurrentVideo} ) {
+  // const { videoId } = useParams()
 
   return (
 
