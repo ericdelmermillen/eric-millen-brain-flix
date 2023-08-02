@@ -1,4 +1,5 @@
 import "./Header.scss";
+// no state needed only props for the components
 
 import avatar from "../../assets/images/Images/Mohan-muruge.jpg";
 import logo from "../../assets/images/Logo/BrainFlix-logo.svg";
@@ -11,7 +12,7 @@ import Search from "../Search/Search";
 
 import { Link } from 'react-router-dom';
 
-function Header( { defaultVideo } ) {
+function Header() {
 
   const searchIconStyle = {
   backgroundImage: `url(${searchIcon})`,
@@ -25,11 +26,7 @@ function Header( { defaultVideo } ) {
 
     <div className="header__container">
       
-      <Link 
-      // to={`${defaultVideo.id}`}
-        className="header__link" 
-      >
-
+      <Link to={"/"} className="header__link">
         <img className="header__logo" src={logo} alt="BrainFlix Logo"/>
       </Link>
 

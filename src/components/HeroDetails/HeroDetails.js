@@ -32,7 +32,7 @@ function HeroDetails({currentVideo, likesIcon, viewsIcon }) {
       </div>
 
       <p className="hero__description">{description}</p>
-      <p className="hero__comment-count">{comments.length} Comments</p> 
+      <p className="hero__comment-count">{comments.length || 0} Comments</p> 
     </article>
   )};
 

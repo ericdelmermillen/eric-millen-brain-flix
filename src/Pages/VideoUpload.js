@@ -10,7 +10,7 @@ function VideoUpload({ defaultVideo}) {
 
     <Button 
       buttonText="CANCEL" 
-      to={`/${defaultVideo.id}`}
+      to={"/"}
       color="#0095FF"
       backgroundColor="#fff"
     />
@@ -20,7 +20,7 @@ function VideoUpload({ defaultVideo}) {
       iconSource={publishIcon} 
       iconAlt="publish icon" 
       // to={"/upload"}
-      to={`/${defaultVideo.id}`}
+      to={"/"}
       // Currently links back to Home: need to check intended funcionality
     />
 
