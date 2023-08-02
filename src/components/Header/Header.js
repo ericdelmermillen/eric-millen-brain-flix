@@ -11,7 +11,8 @@ import Search from "../Search/Search";
 
 import { Link } from 'react-router-dom';
 
-function Header( { defaultVideo, updateCurrentVideo} ) {
+function Header( { defaultVideo } ) {
+
   const searchIconStyle = {
   backgroundImage: `url(${searchIcon})`,
   backgroundPosition: "5px center",
@@ -19,19 +20,14 @@ function Header( { defaultVideo, updateCurrentVideo} ) {
   backgroundSize: "20px",
   paddingLeft: "30px",
 };
-  // console.log(currentVideo)
+
   return (
 
     <div className="header__container">
       
-      <Link to={`${defaultVideo.id}`}
+      <Link 
+      // to={`${defaultVideo.id}`}
         className="header__link" 
-        onClick={() =>  
-        updateCurrentVideo()}
-        
-        // to={`/watching/${defaultVideoId}`}
-        // className="header__link"
-        // onClick={() => updateCurrentVideo()}
       >
 
         <img className="header__logo" src={logo} alt="BrainFlix Logo"/>
@@ -41,7 +37,12 @@ function Header( { defaultVideo, updateCurrentVideo} ) {
 
       <Avatar avatar={avatar} ariaDescription={"profile icon for Mohan"}/>
 
-      <Button buttonText="UPLOAD" iconSource={uploadIcon} iconAlt="upload icon" to={"/upload"}/>
+      <Button 
+        buttonText="UPLOAD" 
+        iconAlt="upload icon" 
+        iconSource={uploadIcon} 
+        to={"/upload"}
+        />
       
     </div>
   )};
