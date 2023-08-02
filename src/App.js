@@ -1,6 +1,5 @@
 import "./App.scss";
 // import videoDetails from "../src/data/video-details.json";
-import axios from "axios"
 
 import { useState, useEffect } from "react";
 import { Route, Routes } from 'react-router-dom';
@@ -22,23 +21,23 @@ function App() {
   //     : setCurrentVideo(videoDetails.find((video) => video.id === id));
   // }
 
-  useEffect(() => {
-      const BASE_URL = "https://project-2-api.herokuapp.com/"
-      const VIDEOS_ENDPOINT = "videos"
-      const API_KEY = "?api_key=57312bbb-57e4-48cf-8bca-3cabccbdf8a4"
+//   useEffect(() => {
+//       const BASE_URL = "https://project-2-api.herokuapp.com/"
+//       const VIDEOS_ENDPOINT = "videos"
+//       const API_KEY = "?api_key=57312bbb-57e4-48cf-8bca-3cabccbdf8a4"
 
-        axios
-        .get(`${BASE_URL}${VIDEOS_ENDPOINT}${API_KEY}`)
-        .then((response) => {
-          console.log(response.data[0]);
-          setCurrentVideo(response.data[0])
-          console.log("Set");
-        })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-          return <div>Looding...</div>
-        });
-}, []);
+//         axios
+//         .get(`${BASE_URL}${VIDEOS_ENDPOINT}${API_KEY}`)
+//         .then((response) => {
+//           console.log(response.data[0]);
+//           setCurrentVideo(response.data[0])
+//           console.log("Set");
+//         })
+//         .catch((error) => {
+//           console.error("Error fetching data:", error);
+//           return <div>Looding...</div>
+//         });
+// }, []);
 
 
   return (
