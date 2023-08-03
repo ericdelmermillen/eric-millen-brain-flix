@@ -10,9 +10,7 @@ function VideoUpload() {
         to={"/"}
         color="#0095FF"
         backgroundColor="#fff"
-        // onClick={() => updateCurrentVideo()}
       />
-
 
       <Button 
         buttonText="PUBLISH" 

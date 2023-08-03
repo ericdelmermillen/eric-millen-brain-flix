@@ -8,14 +8,14 @@ import NotFound from "./components/NotFound/NotFound";
 import VideoUpload from "./Pages/VideoUpload/VideoUpload";
 
 function App() {
-
+  
   return (
     <>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} /> 
-          <Route path="/:videoId" element={<Home />}/>
+          <Route path="/videos/:id" element={<Home />}/>
 
           <Route path="/upload" element={<VideoUpload />}/>
 

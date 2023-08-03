@@ -9,8 +9,11 @@ import HeroComments from "../HeroComments/HeroComments";
 import HeroDetails from "../HeroDetails/HeroDetails";
 import NewComment from "../NewComment/NewComment";
 
-function VideoDetailsSection({updateCurrentVideo, currentVideo}) {
+function VideoDetailsSection({ currentVideo}) {
   return (
+
+    // Should I call for the video details here with useEffect?
+
     <section className="video-details">
 
       <HeroDetails currentVideo={currentVideo} viewsIcon={viewsIcon} likesIcon={likesIcon}/>

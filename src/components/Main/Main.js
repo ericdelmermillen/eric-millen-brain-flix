@@ -1,20 +1,22 @@
 import "./Main.scss";
-// import axios from "axios"
 
 import videos from "../../data/videos.json";
 
 import VideoDetailsSection from "../VideoDetailsSection/VideoDetailsSection";
 import NextVideos from "../NextVideos/NextVideos";
 
-function Main({updateCurrentVideo, currentVideo}) {
-  // console.log(currentVideo)
+function Main({updateCurrentVideo, currentVideo, videosListData}) {
   
   return (
     <main className="main">
 
-      <VideoDetailsSection updateCurrentVideo={updateCurrentVideo} currentVideo={currentVideo}/>
+      <VideoDetailsSection currentVideo={currentVideo}/>
 
-      <NextVideos videos={videos} updateCurrentVideo={updateCurrentVideo} currentVideoId={currentVideo.id}/> 
+      <NextVideos 
+        videosListData={videosListData} 
+        updateCurrentVideo={updateCurrentVideo} 
+        currentVideoId={currentVideo.id} 
+        videos={videos}/> 
 
     </main>
   )};

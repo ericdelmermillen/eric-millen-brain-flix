@@ -2,16 +2,16 @@ import "./NextVideos.scss";
 
 import Video from "../Video/Video";
 
-function NextVideos({videos, updateCurrentVideo, currentVideoId}) {
-
-  // console.log(currentVideoId)
-  // console.log(updateCurrentVideo)
+function NextVideos({ updateCurrentVideo, currentVideoId, videosListData}) {
 
   return (
     <section className="next-videos">
       <h2 className="next-videos__heading">NEXT VIDEOS</h2>
       
-      {videos
+      {/* {videos
+        .filter(video => video.id !== currentVideoId)
+        .map((video) => ( */}
+      {videosListData
         .filter(video => video.id !== currentVideoId)
         .map((video) => (
             <Video 

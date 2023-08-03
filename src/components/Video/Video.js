@@ -6,8 +6,10 @@ function Video({video, updateCurrentVideo}) {
 
   return (
 
-      <Link to={`/${id}`} className="video-link">
-        <div className="video" onClick={() => updateCurrentVideo(id)}>
+      <Link to={`/videos/${id}`} className="video-link">
+        {/* <Route path="/videos/:id" element={<Home />}/> */}
+        <div className="video" >
+        {/* <div className="video"> */}
           <img className="video__thumbnail" src={image} alt="" />
           <div className="video__text">
             <h4 className="video__title">{
