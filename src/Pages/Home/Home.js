@@ -11,15 +11,13 @@ import Main from "../../components/Main/Main";
 function Home() {
 
   const {id} = useParams()
-
-  // if !id default?
-  console.log(id)
-
+  // id exists
 
   const BASE_URL = "https://project-2-api.herokuapp.com/";
   const VIDEOS_ENDPOINT = "videos";
   const API_KEY = "?api_key=57312bbb-57e4-48cf-8bca-3cabccbdf8a4";
 
+  const [currentVideoId, setCurrentVideoId] = useState(id);
   const [currentVideo, setCurrentVideo] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [defaultVideo, setDefaultVideo] = useState(null);
