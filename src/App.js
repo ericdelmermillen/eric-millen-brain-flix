@@ -1,57 +1,41 @@
 import "./App.scss";
-
-// state: needed in Home -- cut
 import videoDetails from "../src/data/video-details.json";
-
 import { useState } from "react";
-
-// --to here
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import Header from "./components/Header/Header";
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
 import NotFound from "./components/NotFound/NotFound";
-import VideoUpload from "./Pages/VideoUpload";
-
+import VideoUpload from "./Pages/VideoUpload/VideoUpload";
 
 function App() {
 
-  // cut
-  
-  const defaultVideo = videoDetails[0];
-  const [currentVideo, setCurrentVideo] = useState(defaultVideo); 
-  
-  function updateCurrentVideo(id) {
-    id === undefined 
-    ? setCurrentVideo(defaultVideo)
-    : setCurrentVideo(videoDetails.find((video) => video.id === id));
-  }
+const defaultVideo = videoDetails[0];
+const [currentVideo, setCurrentVideo] = useState(defaultVideo); 
 
-  // to here  and move to Home
+function updateCurrentVideo(id) {
+  id === undefined 
+  ? setCurrentVideo(defaultVideo)
+  : setCurrentVideo(videoDetails.find((video) => video.id === id));
+}
 
   return (
-    
     <>
       <BrowserRouter>
-        <Header />
-          <Routes>
-        
-            <Route path="/" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} /> 
-            {/* this wil no longer require props once Home is responsible for state: remove currentVideoa nd updateCurrentVideo */}
+        <Header defaultVideo={defaultVideo} updateCurrentVideo={updateCurrentVideo}/>
+        <Routes>
 
-        
-            <Route path="/video/:videoId" element={<Home />}/>
-        
-            <Route path="/upload" element={<VideoUpload />}/>
+          <Route path="/" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} /> 
 
-            <Route path="*" element={<NotFound/>} />
+          <Route path="/:videoId" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>}/>
 
-          </Routes>
+          <Route path="/upload" element={<VideoUpload />}/>
+
+          <Route path="*" element={<NotFound/>} />
+        </Routes>
         </BrowserRouter>
     </>
-    
   )};
-
 
 export default App;

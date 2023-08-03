@@ -4,6 +4,9 @@ import Video from "../Video/Video";
 
 function NextVideos({videos, updateCurrentVideo, currentVideoId}) {
 
+  // console.log(currentVideoId)
+  // console.log(updateCurrentVideo)
+
   return (
     <section className="next-videos">
       <h2 className="next-videos__heading">NEXT VIDEOS</h2>
@@ -15,6 +18,7 @@ function NextVideos({videos, updateCurrentVideo, currentVideoId}) {
               key={video.id} 
               video={video} 
               updateCurrentVideo= {updateCurrentVideo}
+              currentVideoId= {currentVideoId}
             />
         ))}
 
