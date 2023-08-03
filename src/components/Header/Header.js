@@ -11,7 +11,7 @@ import Search from "../Search/Search";
 
 import { Link } from 'react-router-dom';
 
-function Header({updateCurrentVideo}) {
+function Header() {
 
   const searchIconStyle = {
   backgroundImage: `url(${searchIcon})`,
@@ -24,7 +24,7 @@ function Header({updateCurrentVideo}) {
   return (
     <div className="header__container">
       
-      <Link to={"/"} className="header__link" onClick={() => updateCurrentVideo()}>
+      <Link to={"/"} className="header__link">
         <img className="header__logo" src={logo} alt="BrainFlix Logo"/>
       </Link>
 

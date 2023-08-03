@@ -2,15 +2,21 @@ import "./HeroVideo.scss";
 
 function HeroVideo({currentVideo}) {
 
+
   return (
+
       <div className="hero__video-container">
-        <video 
-          className="hero__video" 
-          src="" 
-          type="" 
-          poster={currentVideo.image} 
-          controls>
-        </video>
+
+        {currentVideo 
+        ? ( <video 
+              className="hero__video" 
+              src="" 
+              type="" 
+              poster={currentVideo.image} 
+              controls>
+              </video> ) 
+          : ( <div>Loading video...</div> )}
+
       </div>
   )};
 

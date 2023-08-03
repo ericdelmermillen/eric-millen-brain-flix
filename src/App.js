@@ -1,6 +1,4 @@
 import "./App.scss";
-import videoDetails from "../src/data/video-details.json";
-import { useState } from "react";
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
@@ -11,24 +9,13 @@ import VideoUpload from "./Pages/VideoUpload/VideoUpload";
 
 function App() {
 
-const defaultVideo = videoDetails[0];
-const [currentVideo, setCurrentVideo] = useState(defaultVideo); 
-
-function updateCurrentVideo(id) {
-  id === undefined 
-  ? setCurrentVideo(defaultVideo)
-  : setCurrentVideo(videoDetails.find((video) => video.id === id));
-}
-
   return (
     <>
       <BrowserRouter>
-        <Header defaultVideo={defaultVideo} updateCurrentVideo={updateCurrentVideo}/>
+        <Header />
         <Routes>
-
-          <Route path="/" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>} /> 
-
-          <Route path="/:videoId" element={<Home currentVideo={currentVideo} updateCurrentVideo={updateCurrentVideo}/>}/>
+          <Route path="/" element={<Home />} /> 
+          <Route path="/:videoId" element={<Home />}/>
 
           <Route path="/upload" element={<VideoUpload />}/>
 
