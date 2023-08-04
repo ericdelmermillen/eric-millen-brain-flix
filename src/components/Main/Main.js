@@ -1,9 +1,8 @@
 import "./Main.scss";
 
-import VideoDetailsSection from "../VideoDetailsSection/VideoDetailsSection";
 import NextVideos from "../NextVideos/NextVideos";
+import VideoDetailsSection from "../VideoDetailsSection/VideoDetailsSection";
 
-// function Main({updateCurrentVideo, currentVideo, videosListData}) {
 function Main({ currentVideo, videosListData}) {
   
   return (

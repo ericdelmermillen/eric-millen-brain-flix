@@ -2,7 +2,7 @@ import "./NextVideos.scss";
 
 import Video from "../Video/Video";
 
-function NextVideos({ updateCurrentVideo, currentVideoId, videosListData}) {
+function NextVideos({ currentVideoId, videosListData}) {
 
   return (
     <section className="next-videos">
@@ -14,11 +14,9 @@ function NextVideos({ updateCurrentVideo, currentVideoId, videosListData}) {
             <Video 
               key={video.id} 
               video={video} 
-              updateCurrentVideo= {updateCurrentVideo}
               currentVideoId= {currentVideoId}
             />
         ))}
-
     </section>
   )};
 

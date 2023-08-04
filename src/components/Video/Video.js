@@ -1,15 +1,13 @@
-import { Link } from "react-router-dom";
 import "./Video.scss";
+import { Link } from "react-router-dom";
 
-function Video({video, updateCurrentVideo}) {
+function Video({video}) {
   const { channel, id, image, title} = video;
 
   return (
 
       <Link to={`/videos/${id}`} className="video-link">
-        {/* <Route path="/videos/:id" element={<Home />}/> */}
         <div className="video" >
-        {/* <div className="video"> */}
           <img className="video__thumbnail" src={image} alt="" />
           <div className="video__text">
             <h4 className="video__title">{
@@ -20,7 +18,6 @@ function Video({video, updateCurrentVideo}) {
             <p className="video__channel">{channel}</p>
           </div>
         </div>
-      
       </Link>
 
   )};

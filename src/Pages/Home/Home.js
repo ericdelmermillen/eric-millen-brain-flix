@@ -1,14 +1,9 @@
 import axios from "axios";
-import { useState, useEffect } from "react";
-
-// need useParams to update active video
-import { useParams } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-
+import { useEffect, useState } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
 
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import Main from "../../components/Main/Main";
-import NotFound from "../../components/NotFound/NotFound";
 
 function Home() {
 
@@ -17,15 +12,11 @@ function Home() {
   const BASE_URL = "https://project-2-api.herokuapp.com/";
   const VIDEOS_ENDPOINT = "videos";
   const API_KEY = "?api_key=57312bbb-57e4-48cf-8bca-3cabccbdf8a4";
-  // end of Environment Variables
-  
   
   // state
   const [currentVideo, setCurrentVideo] = useState(null || id);
-
   const [isLoading, setIsLoading] = useState(true);
   const [videosListData, setVideosListData] = useState([]);
-  // state for not found
 
   const navigate = useNavigate()
 
@@ -52,34 +43,28 @@ function Home() {
             console.error("Error fetching video details:", error);
             setIsLoading(false);
             navigate("/NotFound")
-            
-          }); // 
+          }); 
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
           setIsLoading(false);
           navigate("/NotFound")
-
       });
-  }, [id]);
-  
+  }, [id, navigate]);
 
   if (isLoading) {
-    // !currentVideoId
     return <div>Loading...</div>;
   }
 
   return (
     <div className="app">
       <div className="app__inner-container">
-        <h1>Yo from Home</h1>
 
         <HeroVideo currentVideoPoster={currentVideo.image} />
 
         <Main currentVideo={currentVideo} videosListData={videosListData}/>
       </div>
     </div>
-  );
-}
+  )};
 
 export default Home;

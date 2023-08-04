@@ -19,7 +19,6 @@ function VideoUpload() {
         to={"/"}
       />
     </>
-  )
-}
+  )};
 
 export default VideoUpload;
