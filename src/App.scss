@@ -1,6 +1,34 @@
-@use "./styles/partials/global" as *;
 @use "./styles/partials/mixins" as *;
 @use "./styles/partials/variables" as *;
+
+*, 
+*::before, 
+*::after {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "AvenirNext";
+}
+
+a, 
+a:hover,
+a:visited,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
 
 .app {
   margin: 0 auto;
