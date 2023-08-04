@@ -1,11 +1,10 @@
 import "./Main.scss";
 
-import videos from "../../data/videos.json";
-
 import VideoDetailsSection from "../VideoDetailsSection/VideoDetailsSection";
 import NextVideos from "../NextVideos/NextVideos";
 
-function Main({updateCurrentVideo, currentVideo, videosListData}) {
+// function Main({updateCurrentVideo, currentVideo, videosListData}) {
+function Main({ currentVideo, videosListData}) {
   
   return (
     <main className="main">
@@ -14,9 +13,8 @@ function Main({updateCurrentVideo, currentVideo, videosListData}) {
 
       <NextVideos 
         videosListData={videosListData} 
-        updateCurrentVideo={updateCurrentVideo} 
         currentVideoId={currentVideo.id} 
-        videos={videos}/> 
+      /> 
 
     </main>
   )};

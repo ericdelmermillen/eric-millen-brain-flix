@@ -10,10 +10,6 @@ function HeroDetails({currentVideo, likesIcon, viewsIcon }) {
         year: "numeric"
       });
 
-      // if (!currentVideo) {
-      //   return <div>Loading...</div>;
-      // }
-
   return (
     <article className="hero__details">
       <h2 className="hero__heading">{title}</h2>

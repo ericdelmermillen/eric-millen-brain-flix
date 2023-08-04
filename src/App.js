@@ -16,9 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} /> 
           <Route path="/videos/:id" element={<Home />}/>
-
           <Route path="/upload" element={<VideoUpload />}/>
-
           <Route path="*" element={<NotFound/>} />
         </Routes>
         </BrowserRouter>

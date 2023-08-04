@@ -1,24 +1,20 @@
 import "./HeroVideo.scss";
 
-function HeroVideo({currentVideo}) {
-
+function HeroVideo({currentVideoPoster}) {
 
   return (
-    // makes own axios call for videoDetails; useEffect;dependency of currentVideoId
-    // error handling for invalid id from axios in catch : render error or navigate to not found
 
       <div className="hero__video-container">
 
-        {currentVideo 
+        {currentVideoPoster 
         ? ( <video 
               className="hero__video" 
               src="" 
               type="" 
-              poster={currentVideo.image} 
+              poster={currentVideoPoster} 
               controls>
               </video> ) 
           : ( <div>Loading video...</div> )}
-
       </div>
   )};
 

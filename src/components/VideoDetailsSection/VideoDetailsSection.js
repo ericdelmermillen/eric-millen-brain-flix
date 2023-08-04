@@ -10,9 +10,8 @@ import HeroDetails from "../HeroDetails/HeroDetails";
 import NewComment from "../NewComment/NewComment";
 
 function VideoDetailsSection({ currentVideo}) {
+  
   return (
-
-    // Should I call for the video details here with useEffect?
 
     <section className="video-details">
 
