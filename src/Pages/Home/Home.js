@@ -3,9 +3,12 @@ import { useState, useEffect } from "react";
 
 // need useParams to update active video
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import Main from "../../components/Main/Main";
+import NotFound from "../../components/NotFound/NotFound";
 
 function Home() {
 
@@ -24,6 +27,7 @@ function Home() {
   const [videosListData, setVideosListData] = useState([]);
   // state for not found
 
+  const navigate = useNavigate()
 
   // 1st axios
   useEffect(() => {
@@ -36,18 +40,29 @@ function Home() {
 
         // 2nd axios
         // Call for videoDetails using id of params id or 0th video for default video
+
         axios
         .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}${API_KEY}`)
         .then((response) => {
+
           setCurrentVideo(response.data);
           setIsLoading(false);
           })
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-        setIsLoading(false);
+          .catch((error) => {
+            console.error("Error fetching video details:", error);
+            setIsLoading(false);
+            navigate("/NotFound")
+            
+          }); // 
+        })
+        .catch((error) => {
+          console.error("Error fetching data:", error);
+          setIsLoading(false);
+          navigate("/NotFound")
+
       });
   }, [id]);
+  
 
   if (isLoading) {
     // !currentVideoId
