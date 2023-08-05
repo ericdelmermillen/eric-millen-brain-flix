@@ -4,6 +4,7 @@ import "./Search.scss";
 function Search({labelText,  placeholder, searchIconStyle, searchId}) {
 
   return (
+    <>
     <form action="" className="search__form">
 
       <label htmlFor={searchId} className="search__label">
@@ -13,6 +14,7 @@ function Search({labelText,  placeholder, searchIconStyle, searchId}) {
       <input id={searchId} className="search" type="search" placeholder={placeholder} style={searchIconStyle}/>
 
     </form>
+    </>
   )};
 
 export default Search;

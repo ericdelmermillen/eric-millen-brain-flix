@@ -5,11 +5,13 @@
   &__container {
     max-width: $desktop-width;
     margin: 0 auto;
+    border: 2px solid green;
     
     @include padding-block(
       $padding-bottom-mobile: 0,
       $padding-bottom-tablet: 0,
-      $padding-bottom-desktop: 0
+      $padding-bottom-desktop: 0,
+      $padding-top-desktop: 0
     );
     @include padding-inline;
     align-items: center;
@@ -25,6 +27,7 @@
       justify-content: center;
       padding-top: 0;
       width: 100%;
+      max-height: 88px;
     }
 
       .btn {
@@ -63,15 +66,5 @@
   
   @media (min-width: $desktop-width) {
     margin-right: 5rem;
-  }
-}
-
-.search {
-  border-radius: 0.25rem;
-  margin-top: 0;
-  margin-bottom: 1.25rem;
-
-  @media (min-width: $tablet-width) {
-    margin-left: auto;
   }
 }
