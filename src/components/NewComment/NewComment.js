@@ -3,11 +3,12 @@ import "./NewComment.scss";
 import Avatar from "../Avatar/Avatar";
 import Button from "../Button/Button";
 
-function NewComment({avatar, commentIcon}) {
+function NewComment({avatarImg, commentIcon}) {
+  
   return (
     <article className="hero__new-comment">
 
-      <Avatar avatar={avatar}/>
+      <Avatar avatarImg={avatarImg} ariaDescription={"profile icon for Mohan"}/>
 
       <form id="commentForm" className="hero__form" method="POST" >
         <div className="hero__form-inner">

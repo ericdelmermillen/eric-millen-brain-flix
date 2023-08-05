@@ -52,12 +52,11 @@ ul {
   }
 }
 
-
-.app {
-  margin: 0 auto;
+.app {  
   width: 100%;
   
-  &inner-container {
+  &__inner-container {
+    margin: 0 auto;
     max-width: $desktop-width;
   }
 }

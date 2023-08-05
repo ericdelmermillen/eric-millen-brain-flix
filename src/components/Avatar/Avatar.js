@@ -2,6 +2,7 @@ import "./Avatar.scss";
 import userPlaceholderImg from "../../assets/images/Images/user-placeholder.png";
 
 function Avatar({avatarImg, ariaDescription}) {
+
   const defaultAvatarDescription = "user avatar";
 
   const divStyle = {

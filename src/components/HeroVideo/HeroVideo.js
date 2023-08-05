@@ -10,7 +10,6 @@ function HeroVideo({currentVideoPoster}) {
       ? ( <video 
             className="hero__video" 
             src="" 
-            type="" 
             poster={currentVideoPoster} 
             controls>
             </video> ) 

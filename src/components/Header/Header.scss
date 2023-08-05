@@ -5,7 +5,6 @@
   &__container {
     max-width: $desktop-width;
     margin: 0 auto;
-    border: 2px solid green;
     
     @include padding-block(
       $padding-bottom-mobile: 0,
