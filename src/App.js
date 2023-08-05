@@ -10,7 +10,6 @@ import VideoUpload from "./Pages/VideoUpload/VideoUpload";
 function App() {
   
   return (
-    <>
       <BrowserRouter>
         <Header />
         <Routes>
@@ -20,7 +19,6 @@ function App() {
           <Route path="*" element={<NotFound/>} />
         </Routes>
         </BrowserRouter>
-    </>
   )};
 
 export default App;
