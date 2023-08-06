@@ -1,9 +1,10 @@
+@use "../../styles/partials/variables" as *;
 
-// .app {
-//   margin: 0 auto;
-//   width: 100%;
+.app {  
+  width: 100%;
   
-//   &inner-container {
-//     max-width: $desktop-width;
-//   }
-// }
+  &__inner-container {
+    margin: 0 auto;
+    max-width: $desktop-width;
+  }
+}

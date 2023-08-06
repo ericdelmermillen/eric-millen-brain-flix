@@ -29,7 +29,13 @@
       $line-height-mobile: 1.5, 
       $font-size-tablet: 1.5rem, 
       $line-height-tablet: 1.5
-    );
+      );
+      display: -webkit-box;
+      line-clamp: 2;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
   }
 
   &__text {

@@ -41,8 +41,13 @@
     }
     
     &__header-channel {
+      display: -webkit-box; 
       font-weight: 700;
-      // white-space: nowrap;
+      line-clamp: 1; 
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-box-orient: vertical; 
+      -webkit-line-clamp: 1; 
   }
   
   &__header-date {
