@@ -1,10 +1,186 @@
+@use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-.app {  
-  width: 100%;
+
+
+.upload {
+  // border: 5px solid red;
+  max-width: $desktop-width;
+  margin: 0 auto;
+  border-top: 2px solid $Mercury;
+  // border-top: 0.0625rem solid $Mercury;
+  @include margin-block;
+  @include padding-block(
+    $padding-bottom-tablet: 1.5rem,
+    $padding-top-tablet: 1.5rem,
+    $padding-bottom-desktop: 1.5rem,
+    $padding-top-desktop: 1.5rem,
+    );
+  @include padding-inline;
+    // @include margin-inline;
+    // display: flex;
+  //   padding-left: 1rem;
+  //   padding-right: 1rem;
+  //   @media (min-width: $tablet-width) {
+  //     padding-left: 0;
+  //     margin-left: 1.5rem;
+  //   }
+  //   @media (min-width: $desktop-width) {
+  //     padding-left: 0;
+  //     margin-left: 2rem;
+  //   }
   
-  &__inner-container {
-    margin: 0 auto;
-    max-width: $desktop-width;
+  &__heading {
+    @include padding-block(
+      $padding-bottom-tablet: 0,
+      $padding-bottom-desktop: 0
+      );
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      line-height: 1.5;
+      
+      @media (min-width: $tablet-width) {
+        border-bottom: none;
+        padding-left: 1.4rem;
+      }
+      
+      @media (min-width: $desktop-width) {
+        border-bottom: none;
+        padding-left: 2rem;
+      }
   }
+  
+  &__sub-heading {
+    color: $Silver;
+    font-weight: bold;
+  }
+
+  &__image-container {
+    padding-top: calc(100% / (16 / 9));
+    position: relative;
+    // width: 30%;
+    // height: 100%;
+    // width: 300px;
+    @include margin-block($margin-bottom-mobile: 2rem)
+  }
+  
+  &__image {
+    position: absolute;
+    border-radius: 4px;
+    top: 0;
+    // left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // border: 5px solid blue;
+  }
+
+
+
 }
+
+
+
+// .upload__form {
+//   border: 2px solid red;
+  
+// }
+
+
+//   .upload__form-inner {
+//     border: 2px solid blue;
+//   }
+
+  .upload__title-label {
+    color: $Silver;
+    font-weight: bold;
+  }
+  
+  .upload__title-input {
+    @include margin-block(
+      $margin-top-mobile: 0.25rem,
+      $margin-top-tablet: 0.25rem,
+      $margin-top-desktop: 0.25rem,
+    ); 
+    @include padding-block(
+      $padding-bottom-tablet: 0,
+      $padding-top-tablet: 0.5rem, 
+      $padding-bottom-desktop: 0,
+      $padding-top-desktop: 0.5rem
+    );
+    @include padding-inline;
+    background: $Alabaster;
+    // border: 0.0625rem solid $Mercury;
+    border: 2px solid $Mercury;
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 2.5rem;
+    resize: none;
+    width: 100%;
+    
+    @media (min-width: $tablet-width){
+      height: 2.5rem;
+      min-height: 2.5rem;
+    }
+  
+    &:focus {
+      // border: 0.0625rem solid $BrainFlixBlue;
+      border: 2px solid $BrainFlixBlue;
+      outline: none;
+    }
+    
+    &:invalid {
+      border: 0.0625rem solid $Invalid;
+      outline: none;
+    }
+  }
+  
+.upload__description-label {
+  color: $Silver;
+    font-weight: bold;
+}
+
+  .upload__description-input {
+    @include margin-block(
+      $margin-top-mobile: 0.25rem,
+      $margin-top-tablet: 0.25rem,
+      $margin-top-desktop: 0.25rem,
+      ); 
+    @include padding-block(
+      $padding-bottom-tablet: 0,
+      $padding-top-tablet: 0.5rem, 
+      $padding-bottom-desktop: 0,
+      $padding-top-desktop: 0.5rem
+    );
+    @include padding-inline;
+    background: $Alabaster;
+    // border: 0.0625rem solid $Mercury;
+    border: 2px solid $Mercury;
+    border-radius: 0.25rem;
+    font-family: inherit;
+    font-size: 1rem;
+    min-height: 10rem;
+    resize: none;
+    width: 100%;
+    
+    @media (min-width: $tablet-width){
+      height: 2.5rem;
+      min-height: 2.5rem;
+    }
+  
+    &:focus {
+      // border: 0.0625rem solid $BrainFlixBlue;
+      border: 2px solid $BrainFlixBlue;
+      outline: none;
+    }
+    
+    &:invalid {
+      border: 0.0625rem solid $Invalid;
+      outline: none;
+    }
+  }
+  
+  .upload__description-label {
+    color: $Silver;
+  }

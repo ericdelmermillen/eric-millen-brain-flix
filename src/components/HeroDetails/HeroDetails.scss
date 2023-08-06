@@ -4,7 +4,9 @@
 .hero {
   &__details {
   @include padding-block;
-  @include padding-inline;
+  @include padding-inline(
+    $padding-left-desktop: 0
+  );
   }
   
   &__heading {
@@ -15,9 +17,16 @@
       border-bottom: 0.0625rem solid $Mercury;
       font-size: 2rem;
       line-height: 1.5;
+      padding-left: 1rem;
       
       @media (min-width: $tablet-width) {
         border-bottom: none;
+        padding-left: 1.4rem;
+      }
+      
+      @media (min-width: $desktop-width) {
+        border-bottom: none;
+        padding-left: 2rem;
       }
     }
     

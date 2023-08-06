@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
+import Loading from "../../components/Loading/Loading";
 import Main from "../../components/Main/Main";
 
 function Home() {
@@ -36,36 +37,40 @@ function Home() {
         axios
         .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}${API_KEY}`)
         .then((response) => {
-
           setCurrentVideo(response.data);
-          setIsLoading(false);
+
+          setTimeout(() => setIsLoading(false), 500);
+
           })
           .catch((error) => {
             console.error("Error fetching video details:", error);
-            setIsLoading(false);
+            
+            setTimeout(() => setIsLoading(false), 500);
+
             navigate("/NotFound")
           }); 
         })
         .catch((error) => {
           console.error("Error fetching data:", error);
-          setIsLoading(false);
+          setTimeout(() => setIsLoading(false), 500);
           navigate("/NotFound")
       });
   }, [id, navigate]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <Loading />
   }
 
   return (
-    <div className="app">
-      <div className="app__inner-container">
-
-        <HeroVideo currentVideoPoster={currentVideo.image} />
+    <>
+        <div className="hero">
+          <div className="hero__inner">
+            <HeroVideo currentVideoPoster={currentVideo.image} />
+          </div>
+        </div>
 
         <Main currentVideo={currentVideo} videosListData={videosListData}/>
-      </div>
-    </div>
+    </>
   )};
 
 export default Home;

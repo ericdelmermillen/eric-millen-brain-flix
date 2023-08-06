@@ -1,0 +1,33 @@
+@use "../../styles/partials/variables" as *;
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loading-ball {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: $BrainFlixBlue; 
+  animation: bounce 0.7s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-60px);
+  }
+}
+
+
+.loading-text {
+  font-size: 24px;
+  color: $BrainFlix-Black;
+  margin-top: 20px;
+}

@@ -211,7 +211,13 @@
 }
 
 // padding-inline (
-  @mixin padding-inline($padding-left-mobile: 1rem, $padding-right-mobile: 1rem, $padding-left-tablet: 1.5rem, $padding-right-tablet: 1.5rem, $padding-left-desktop: 2rem, $padding-right-desktop: 2rem) {
+  @mixin padding-inline(
+    $padding-left-mobile: 1rem, 
+    $padding-right-mobile: 1rem, 
+    $padding-left-tablet: 1.5rem, 
+    $padding-right-tablet: 1.5rem, 
+    $padding-left-desktop: 2rem, 
+    $padding-right-desktop: 2rem) {
     
     @media (max-width: $mobile-width) {
       padding-left: $padding-left-mobile;

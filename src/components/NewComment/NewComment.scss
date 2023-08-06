@@ -11,8 +11,18 @@
       $padding-top-desktop: 1.5rem,
     );
     @include margin-inline;
-    border-bottom: 0.0625rem solid $Mercury;
+    border-bottom: 2px solid $Mercury;
     display: flex;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    @media (min-width: $tablet-width) {
+      padding-left: 0;
+      margin-left: 1.5rem;
+    }
+    @media (min-width: $desktop-width) {
+      padding-left: 0;
+      margin-left: 2rem;
+    }
     
     .avatar {
       order: 0;
@@ -65,7 +75,7 @@
     @include margin-block(
       $margin-top-tablet: 0.25rem,
       $margin-top-desktop: 0.25rem,
-    ); 
+      ); 
     @include padding-block(
       $padding-bottom-tablet: 0,
       $padding-top-tablet: 0.5rem, 
@@ -74,7 +84,7 @@
     );
     @include padding-inline;
     background: $Alabaster;
-    border: 0.0625rem solid $Mercury;
+    border: 2px solid $Mercury;
     border-radius: 0.25rem;
     font-family: inherit;
     font-size: 1rem;
@@ -88,12 +98,12 @@
     }
   
     &:focus {
-      border: 0.0625rem solid $BrainFlixBlue;
+      border: 2px solid $BrainFlixBlue;
       outline: none;
     }
     
     &:invalid {
-      border: 0.0625rem solid $Invalid;
+      border: 2px solid $Invalid;
       outline: none;
     }
   }

@@ -8,6 +8,7 @@
   @include margin-inline(
     $margin-right-desktop: 6rem
   );
+  padding-left: 1rem;
   
   @media (min-width: $desktop-width){
     width: 35%;

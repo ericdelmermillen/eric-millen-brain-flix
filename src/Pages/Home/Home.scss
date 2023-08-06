@@ -1,12 +1,18 @@
+@use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-// .app {
-//   margin: 0 auto;
-//   width: 100%;
-//   border: 5px solid red;
-  
-//   &__inner-container {
-//     max-width: $desktop-width;
-//     border: 5px solid blue;
-//   }
-// }
+.hero {
+  background: $BrainFlix-DarkBlack;
+}
+
+.hero__inner {
+  max-width: $desktop-width;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    padding-inline: 1rem;
+  }
+  @media (min-width: $desktop-width) {
+    padding-inline: 7em;
+  }
+}
