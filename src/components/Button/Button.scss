@@ -28,24 +28,18 @@
   }
   
   &__text {
-    justify-self: center;
-    padding-left: 0;
-    margin-left: 0;
     color: $White;
     font-size: 0.625rem;
-    line-height: 1.25rem; 
     font-weight: 700;
+    justify-self: center;
+    line-height: 1.25rem; 
+    margin-left: 0;
+    padding-left: 0;
 
     @media (min-width: $tablet-width) {
       font-size: 0.75rem;
-      line-height: 1.25rem;
       font-weight: 700;
+      line-height: 1.25rem;
     }
-
-
-
-
-
-
   }
 }

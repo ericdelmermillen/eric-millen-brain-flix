@@ -2,15 +2,20 @@
 @use "../../styles/partials/variables" as *;
 
 .search {
-  @include margin-block;
+  @include margin-block(
+    $margin-top-desktop: 1.5rem,
+    $margin-bottom-desktop: 1.5rem
+  );
   border: 2px solid $Mercury;
   border-radius: 0.25rem;
   display: inline-block;
   height: 2.5rem;
+  margin: auto 0;
   width: 100%;
 
   @media (min-width: $tablet-width) {
     width: 15rem;
+    margin-left: auto;
   }
 
   &:focus {
@@ -25,22 +30,18 @@
   &__label {
     display: none;
   }
-}
-
-.search__form {
-  width: calc(100% - (2.5rem + 5%));
-  max-height: 88px;
-
-  @media (min-width: $tablet-width) {
-    width: 15rem;
-  }
-}
-
-.search {
-  border-radius: 0.25rem;
-  margin: auto 0;
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
   }
+
+  &__form {
+    max-height: 88px;
+    width: calc(100% - (2.5rem + 5%));
+  
+    @media (min-width: $tablet-width) {
+      width: 15rem;
+    }
+  }
 }
+

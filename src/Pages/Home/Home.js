@@ -32,15 +32,11 @@ function Home() {
         .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}${API_KEY}`)
         .then((response) => {
           setCurrentVideo(response.data);
-
           setTimeout(() => setIsLoading(false), 500);
-
           })
           .catch((error) => {
             console.error("Error fetching video details:", error);
-            
             setTimeout(() => setIsLoading(false), 500);
-
             navigate("/NotFound")
           }); 
         })

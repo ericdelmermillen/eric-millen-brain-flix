@@ -8,7 +8,9 @@ function Main({ currentVideo, videosListData}) {
   return (
     <main className="main">
 
-      <VideoDetailsSection currentVideo={currentVideo}/>
+      <VideoDetailsSection 
+        currentVideo={currentVideo}
+      />
 
       <NextVideos 
         videosListData={videosListData} 

@@ -1,11 +1,12 @@
 import "./HeroVideo.scss";
 
+import Loading from "../Loading/Loading";
+
 function HeroVideo({currentVideoPoster}) {
 
   return (
 
     <div className="hero__video-container">
-
       {currentVideoPoster 
       ? ( <video 
             className="hero__video" 
@@ -13,7 +14,7 @@ function HeroVideo({currentVideoPoster}) {
             poster={currentVideoPoster} 
             controls>
             </video> ) 
-        : ( <div>Loading video...</div> )}
+        : ( <Loading /> )}
     </div>
   )};
 

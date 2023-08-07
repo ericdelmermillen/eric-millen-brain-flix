@@ -17,9 +17,8 @@ function NotFound() {
         iconAlt="upload icon" 
         iconSource={homeIcon} 
         to={"/"}
-        />
+      />
     </div>
-  )
-}
+  )};
 
-export default NotFound
+export default NotFound;

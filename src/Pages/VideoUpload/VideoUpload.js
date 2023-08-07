@@ -14,7 +14,6 @@ function VideoUpload() {
     const [titleData, setTitleData] = useState("");
     const [descriptionData, setDescriptionData] = useState("");
 
-
     const [titleisInvalid, setTitleisInvalid] = useState(false);
     const [descriptionIsInvalid, setDescriptionIsInvalid] = useState(false);
     
@@ -85,8 +84,8 @@ function VideoUpload() {
 
             <textarea 
               className={descriptionIsInvalid
-                ? "upload__title-input invalid" 
-                : "upload__title-input"
+                ? "upload__description-input invalid" 
+                : "upload__description-input"
               }
               id="uploadDescription" 
               name="uploadDescription" 

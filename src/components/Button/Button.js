@@ -1,7 +1,7 @@
 import "./Button.scss";
 import { Link } from 'react-router-dom';
 
-function Button({ backgroundColor, btnType, buttonText, color, iconAlt, iconSource, onClick, to }) {
+function Button({ backgroundColor, buttonText, btnType, color, iconAlt, iconSource, onClick, to }) {
 
   const buttonStyle = {
     backgroundColor: backgroundColor || "",
@@ -33,7 +33,6 @@ function Button({ backgroundColor, btnType, buttonText, color, iconAlt, iconSour
       </span>
 
     </Link>
-  );
-}
+  )};
 
 export default Button;

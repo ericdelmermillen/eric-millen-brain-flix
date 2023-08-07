@@ -4,21 +4,21 @@
 .hero {
   &__video-container {
     background: $BrainFlix-DarkBlack;
-    width: 100%;
-    position: relative;
-    padding-top: calc(100% / (16 / 9));
-    max-width: $desktop-width;
     margin: 0 auto;
     max-height: 720px;
+    max-width: $desktop-width;
+    padding-top: calc(100% / (16 / 9));
+    position: relative;
+    width: 100%;
   }
   
   &__video {
+    display: block;
+    height: 100%;
+    margin: 0 auto;
+    object-fit: cover;
     position: absolute;
     top: 0;
-    height: 100%;
     width: 100%;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
   }
 }

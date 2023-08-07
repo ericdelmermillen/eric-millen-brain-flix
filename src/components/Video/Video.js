@@ -10,8 +10,9 @@ function Video({video}) {
         <div className="video" >
           <img className="video__thumbnail" src={image} alt="" />
           <div className="video__text">
-            <h4 className="video__title">{
-              title}</h4>
+            <h4 className="video__title">
+              {title}
+            </h4>
             <p className="video__channel">{channel}</p>
           </div>
         </div>

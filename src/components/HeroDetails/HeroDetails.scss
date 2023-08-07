@@ -44,8 +44,8 @@
       justify-content: space-between;
       
       @media (min-width: $tablet-width) {
-        flex-direction: row;
         @include gap;
+        flex-direction: row;
       }
     }
     

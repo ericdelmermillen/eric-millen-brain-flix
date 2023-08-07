@@ -1,13 +1,11 @@
-import "./Loading.scss"
+import "./Loading.scss";
 
 function Loading() {
   return (
-    <div className="loading-container">
-      <div className="loading-ball"></div>
-      <div className="loading-text">Loading...</div>
+    <div className="loading">
+      <div className="loading__ball"></div>
+      <div className="loading__text">Loading...</div>
     </div>
+  )};
 
-  )
-}
-
-export default Loading
+export default Loading;

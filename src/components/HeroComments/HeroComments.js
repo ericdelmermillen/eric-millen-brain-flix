@@ -8,6 +8,7 @@ function HeroComments({ currentVideo }) {
   return (
     <section className="hero__comments" role="list">
       {comments.map((comment) => 
+      
         <CommentCard
           key={comment.id} 
           comment={comment}
