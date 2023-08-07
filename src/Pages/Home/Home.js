@@ -15,24 +15,18 @@ function Home() {
   const VIDEOS_ENDPOINT = "videos";
   const API_KEY = "?api_key=57312bbb-57e4-48cf-8bca-3cabccbdf8a4";
   
-  // state
   const [currentVideo, setCurrentVideo] = useState(null || id);
   const [isLoading, setIsLoading] = useState(true);
   const [videosListData, setVideosListData] = useState([]);
 
   const navigate = useNavigate()
 
-  // 1st axios
   useEffect(() => {
-    // Call for videosList: get id of 0th video for videoDetails call
     axios
       .get(`${BASE_URL}${VIDEOS_ENDPOINT}${API_KEY}`)
       .then((response) => {
         setVideosListData(response.data);
         const targetVideoId = id || response.data[0].id;
-
-        // 2nd axios
-        // Call for videoDetails using id of params id or 0th video for default video
 
         axios
         .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}${API_KEY}`)
@@ -56,6 +50,11 @@ function Home() {
           navigate("/NotFound")
       });
   }, [id, navigate]);
+
+  useEffect(() => {
+      window.scrollTo(0, 0);
+  }, [currentVideo]);
+
 
   if (isLoading) {
     return <Loading />

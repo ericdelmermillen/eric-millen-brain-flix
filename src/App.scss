@@ -23,6 +23,11 @@
 // // Global Styles
 
 // Global Reset
+
+html {
+  scroll-behavior: smooth;
+}
+
 *, 
 *::before, 
 *::after {

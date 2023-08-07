@@ -1,12 +1,17 @@
 import "./Button.scss";
 import { Link } from 'react-router-dom';
 
-function Button({ buttonText, btnType, iconAlt, iconSource, to, backgroundColor, color }) {
-
+function Button({ backgroundColor, btnType, buttonText, color, iconAlt, iconSource, onClick, to }) {
 
   const buttonStyle = {
     backgroundColor: backgroundColor || "",
     color: color || "",
+  };
+
+  const handleClick = (e) => {
+    if (onClick) {
+      onClick(e);
+    }
   };
 
   return (
@@ -15,6 +20,7 @@ function Button({ buttonText, btnType, iconAlt, iconSource, to, backgroundColor,
       to={to}
       type={btnType}
       style={buttonStyle}
+      onClick={handleClick}
     >
 
       {iconSource && <img className="btn__icon" src={iconSource} alt={iconAlt} />}

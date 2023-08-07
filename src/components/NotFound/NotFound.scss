@@ -1,0 +1,33 @@
+@use "../../styles/partials/variables" as *;
+
+.not-found {
+  align-items: center; 
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  gap: 2rem;
+  padding-top: 3rem;
+  text-align: center;
+  padding-inline: 1rem;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 4rem;
+
+  }
+  
+  @media (min-width: $desktop-width) {
+    padding-top: 5%;
+
+  }
+  .btn {
+    
+    @media (min-width: $tablet-width) {
+      margin-top: 0;
+  
+    }
+  }
+
+  .logo {
+    width: 50%;
+  }
+}
