@@ -1,3 +1,4 @@
+// working from my api
 import "./Home.scss"
 import axios from "axios";
 import { useEffect, useState } from "react";
@@ -11,9 +12,8 @@ function Home() {
 
   const {id} = useParams()
 
-  const BASE_URL = "https://project-2-api.herokuapp.com/";
-  const VIDEOS_ENDPOINT = "videos";
-  const API_KEY = "?api_key=57312bbb-57e4-48cf-8bca-3cabccbdf8a4";
+  const BASE_URL = "http://localhost:8080/";
+  const VIDEOS_ENDPOINT = "videos"
   
   const [currentVideo, setCurrentVideo] = useState(null || id);
   const [isLoading, setIsLoading] = useState(true);
@@ -23,13 +23,14 @@ function Home() {
 
   useEffect(() => {
     axios
-      .get(`${BASE_URL}${VIDEOS_ENDPOINT}${API_KEY}`)
+      .get(`${BASE_URL}${VIDEOS_ENDPOINT}`)
       .then((response) => {
         setVideosListData(response.data);
         const targetVideoId = id || response.data[0].id;
 
         axios
-        .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}${API_KEY}`)
+        // .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}${API_KEY}`)
+        .get(`http://localhost:8080/videos/${targetVideoId}`)
         .then((response) => {
           setCurrentVideo(response.data);
           setTimeout(() => setIsLoading(false), 500);
