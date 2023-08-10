@@ -19,7 +19,7 @@ function Home() {
   const [isLoading, setIsLoading] = useState(true);
   const [videosListData, setVideosListData] = useState([]);
 
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     axios
@@ -29,8 +29,7 @@ function Home() {
         const targetVideoId = id || response.data[0].id;
 
         axios
-        // .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}${API_KEY}`)
-        .get(`http://localhost:8080/videos/${targetVideoId}`)
+        .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}`)
         .then((response) => {
           setCurrentVideo(response.data);
           setTimeout(() => setIsLoading(false), 500);

@@ -1,6 +1,8 @@
 import "./VideoUpload.scss";
+import axios from "axios";
 
 import { useEffect, useState } from "react";
+import { useNavigate, useParams } from 'react-router-dom';
 
 import uploadVideoPreview from "../../assets/images/Images/Upload-video-preview.jpg";
 import homeIcon from "../../assets/images/Icons/home.svg";
@@ -8,33 +10,51 @@ import publishIcon from "../../assets/images/Icons/publish.svg";
 
 import Button from "../../components/Button/Button";
 
+const BASE_URL = "http://localhost:8080/";
+const VIDEOS_ENDPOINT = "videos"
+
 
 function VideoUpload() {
+  const navigate = useNavigate();
 
-    const [titleData, setTitleData] = useState("");
-    const [descriptionData, setDescriptionData] = useState("");
+  const [titleData, setTitleData] = useState("");
+  const [descriptionData, setDescriptionData] = useState("");
 
-    const [titleisInvalid, setTitleisInvalid] = useState(false);
-    const [descriptionIsInvalid, setDescriptionIsInvalid] = useState(false);
+  const [titleIsInvalid, setTitleIsInvalid] = useState(false);
+  const [descriptionIsInvalid, setDescriptionIsInvalid] = useState(false);
+  
+  const [hasPublished, setHasPublished] = useState(false);
+
+  // console.log(titleData)
+  // console.log(descriptionData)
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
     
-    const [hasPublished, setHasPublished] = useState(false);
+    setTitleIsInvalid(titleData.length < 10);
+    setDescriptionIsInvalid(descriptionData.length < 10);
 
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      
-      setTitleisInvalid(titleData.length < 10);
-      setDescriptionIsInvalid(descriptionData.length < 10);
+    // if title and description is valid create response object with title and decription
 
-      titleData.length >= 10 && descriptionData.length >= 10 
-        ? setHasPublished(true)
-        : console.log("< 10")
+    if(titleIsInvalid === false && descriptionIsInvalid === false) {
+      console.log(titleIsInvalid)
+      console.log(titleIsInvalid)
+
+      const videoDataObj = {title: titleData, description: descriptionData};
+
+      axios 
+        .post(`${BASE_URL}${VIDEOS_ENDPOINT}`, videoDataObj, setHasPublished(true))
+        .then(response => {
+          console.log(response.data)
+        })
     }
+  }
 
-    useEffect(() => {
-      if (hasPublished) {
-        window.scrollTo(0, 0);
-      }
-    }, [hasPublished]);
+  useEffect(() => {
+    if (hasPublished) {
+      window.scrollTo(0, 0);
+    }
+  }, [hasPublished]);
 
   return (
 
@@ -57,7 +77,7 @@ function VideoUpload() {
 
             <label className="upload__title-label" htmlFor="uploadTitle">
               TITLE YOUR VIDEO 
-              {titleisInvalid &&
+              {titleIsInvalid &&
                 <span className="not-valid">Too Short</span>
               }
             </label>
@@ -65,7 +85,7 @@ function VideoUpload() {
             <input 
               id="uploadTitle" 
               name="uploadTitle" 
-              className={titleisInvalid
+              className={titleIsInvalid
                 ? "upload__title-input invalid" 
                 : "upload__title-input"}
 
