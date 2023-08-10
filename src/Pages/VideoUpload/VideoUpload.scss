@@ -223,3 +223,10 @@ label:focus .not-valid {
   transform: translate(-50%, -50%);
   z-index: 1; 
 }
+
+
+.upload__title-input.invalid:focus,
+.upload__description-input.invalid:focus {
+  border: 2px solid $Invalid;
+  outline: none;
+}

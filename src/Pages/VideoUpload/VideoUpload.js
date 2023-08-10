@@ -2,7 +2,6 @@ import "./VideoUpload.scss";
 import axios from "axios";
 
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from 'react-router-dom';
 
 import uploadVideoPreview from "../../assets/images/Images/Upload-video-preview.jpg";
 import homeIcon from "../../assets/images/Icons/home.svg";
@@ -15,40 +14,33 @@ const VIDEOS_ENDPOINT = "videos"
 
 
 function VideoUpload() {
-  const navigate = useNavigate();
 
   const [titleData, setTitleData] = useState("");
   const [descriptionData, setDescriptionData] = useState("");
 
-  const [titleIsInvalid, setTitleIsInvalid] = useState(false);
-  const [descriptionIsInvalid, setDescriptionIsInvalid] = useState(false);
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  const [titleIsValid, setTitleIsValid] = useState(null);
+  const [descriptionIsValid, setDescriptionIsValid] = useState(false);
   
   const [hasPublished, setHasPublished] = useState(false);
 
-  // console.log(titleData)
-  // console.log(descriptionData)
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
+    setFormSubmitted(true); 
     
-    setTitleIsInvalid(titleData.length < 10);
-    setDescriptionIsInvalid(descriptionData.length < 10);
 
-    // if title and description is valid create response object with title and decription
-
-    if(titleIsInvalid === false && descriptionIsInvalid === false) {
-      console.log(titleIsInvalid)
-      console.log(titleIsInvalid)
-
-      const videoDataObj = {title: titleData, description: descriptionData};
-
-      axios 
-        .post(`${BASE_URL}${VIDEOS_ENDPOINT}`, videoDataObj, setHasPublished(true))
-        .then(response => {
-          console.log(response.data)
-        })
+    if (titleData.length >= 10 && descriptionData.length >= 10) {
+      const videoDataObj = { title: titleData, description: descriptionData };
+  
+      axios
+        .post(`${BASE_URL}${VIDEOS_ENDPOINT}`, videoDataObj)
+        .then((response) => {
+          setHasPublished(true);
+        });
     }
-  }
+  };
 
   useEffect(() => {
     if (hasPublished) {
@@ -77,17 +69,18 @@ function VideoUpload() {
 
             <label className="upload__title-label" htmlFor="uploadTitle">
               TITLE YOUR VIDEO 
-              {titleIsInvalid &&
+               {formSubmitted && titleData.length < 10 && 
                 <span className="not-valid">Too Short</span>
-              }
+                }
             </label>
 
             <input 
               id="uploadTitle" 
               name="uploadTitle" 
-              className={titleIsInvalid
+              className={formSubmitted && titleData.length < 10
                 ? "upload__title-input invalid" 
-                : "upload__title-input"}
+                : "upload__title-input"
+              }
 
               type="text" 
               placeholder="Add a title to your video" 
@@ -97,16 +90,24 @@ function VideoUpload() {
 
             <label className="upload__description-label" htmlFor="uploadDescription">
               ADD A VIDEO DESCRIPTION 
-              {descriptionIsInvalid &&
-                <span className="not-valid">Too Short</span>
-              }
+              
+              {formSubmitted && descriptionData.length < 10 && 
+                <span className="not-valid">
+                  Too Short
+                </span>}
+
             </label>
 
             <textarea 
-              className={descriptionIsInvalid
-                ? "upload__description-input invalid" 
-                : "upload__description-input"
+              className={formSubmitted && descriptionData.length < 10
+                ? "upload__title-input invalid" 
+                : "upload__title-input"
               }
+
+
+
+
+
               id="uploadDescription" 
               name="uploadDescription" 
               placeholder="Add a description to your video" 
