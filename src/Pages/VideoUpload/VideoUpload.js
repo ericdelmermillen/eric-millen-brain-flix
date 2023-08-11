@@ -20,8 +20,8 @@ function VideoUpload() {
 
   const [formSubmitted, setFormSubmitted] = useState(false);
 
-  const [titleIsValid, setTitleIsValid] = useState(null);
-  const [descriptionIsValid, setDescriptionIsValid] = useState(false);
+  // const [titleIsValid, setTitleIsValid] = useState(null);
+  // const [descriptionIsValid, setDescriptionIsValid] = useState(false);
   
   const [hasPublished, setHasPublished] = useState(false);
 
