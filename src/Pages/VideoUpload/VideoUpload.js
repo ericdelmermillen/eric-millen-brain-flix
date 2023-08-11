@@ -103,11 +103,6 @@ function VideoUpload() {
                 ? "upload__title-input invalid" 
                 : "upload__title-input"
               }
-
-
-
-
-
               id="uploadDescription" 
               name="uploadDescription" 
               placeholder="Add a description to your video" 
