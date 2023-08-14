@@ -19,9 +19,6 @@ function VideoUpload() {
   const [descriptionData, setDescriptionData] = useState("");
 
   const [formSubmitted, setFormSubmitted] = useState(false);
-
-  // const [titleIsValid, setTitleIsValid] = useState(null);
-  // const [descriptionIsValid, setDescriptionIsValid] = useState(false);
   
   const [hasPublished, setHasPublished] = useState(false);
 
@@ -30,7 +27,6 @@ function VideoUpload() {
     e.preventDefault();
     setFormSubmitted(true); 
     
-
     if (titleData.length >= 10 && descriptionData.length >= 10) {
       const videoDataObj = { title: titleData, description: descriptionData };
   
@@ -38,7 +34,7 @@ function VideoUpload() {
         .post(`${BASE_URL}${VIDEOS_ENDPOINT}`, videoDataObj)
         .then((response) => {
           setHasPublished(true);
-        });
+      });
     }
   };
 
@@ -63,7 +59,10 @@ function VideoUpload() {
           />
         </div>
 
-        <form id="uploadForm" className="upload__form" onSubmit={(e) => handleSubmit(e)}>
+        <form id="uploadForm"   
+          className="upload__form"
+          onSubmit={(e) => handleSubmit(e)}
+        >
 
           <div className="upload__form-inner">
 

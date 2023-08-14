@@ -9,25 +9,25 @@ import Loading from "../../components/Loading/Loading";
 import Main from "../../components/Main/Main";
 
 function Home() {
-
+  
   const {id} = useParams()
-
+  
   const BASE_URL = "http://localhost:8080/";
   const VIDEOS_ENDPOINT = "videos"
   
   const [currentVideo, setCurrentVideo] = useState(null || id);
   const [isLoading, setIsLoading] = useState(true);
   const [videosListData, setVideosListData] = useState([]);
-
+  
   const navigate = useNavigate();
-
+  
   useEffect(() => {
     axios
-      .get(`${BASE_URL}${VIDEOS_ENDPOINT}`)
-      .then((response) => {
-        setVideosListData(response.data);
-        const targetVideoId = id || response.data[0].id;
-
+    .get(`${BASE_URL}${VIDEOS_ENDPOINT}`)
+    .then((response) => {
+      setVideosListData(response.data);
+      const targetVideoId = id || response.data[0].id;
+      
         axios
         .get(`${BASE_URL}${VIDEOS_ENDPOINT}/${targetVideoId}`)
         .then((response) => {
@@ -44,18 +44,17 @@ function Home() {
           console.error("Error fetching data:", error);
           setTimeout(() => setIsLoading(false), 500);
           navigate("/NotFound")
-      });
-  }, [id, navigate]);
+        });
+      }, [id, navigate]);
 
   useEffect(() => {
-      window.scrollTo(0, 0);
+    window.scrollTo(0, 0);
   }, [currentVideo]);
-
 
   if (isLoading) {
     return <Loading />
   }
-
+  
   return (
     <>
         <div className="hero">
@@ -64,7 +63,8 @@ function Home() {
           </div>
         </div>
 
-        <Main currentVideo={currentVideo} videosListData={videosListData}/>
+        <Main currentVideo={currentVideo} videosListData={videosListData}
+        />
     </>
   )};
 

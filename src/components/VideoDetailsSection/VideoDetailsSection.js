@@ -17,7 +17,11 @@ function VideoDetailsSection({ currentVideo}) {
 
       <HeroDetails currentVideo={currentVideo} viewsIcon={viewsIcon} likesIcon={likesIcon}/>
 
-      <NewComment avatarImg={avatar} commentIcon={commentIcon} />
+      <NewComment 
+        avatarImg={avatar} 
+        commentIcon={commentIcon} 
+        currentVideoId={currentVideo.id}
+        />
 
       <HeroComments currentVideo={currentVideo} avatar={avatar}/>
 

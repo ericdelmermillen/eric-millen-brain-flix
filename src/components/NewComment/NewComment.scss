@@ -69,6 +69,8 @@
 
   &__comment-label {
     color: $Silver;
+    display: flex;
+    justify-content: space-between;
   }
   
   &__comment-input {
@@ -117,4 +119,11 @@
   @media (min-width: $tablet-width) {
     width: 9.375rem;
   }
+}
+
+
+.hero__comment-input.invalid:focus,
+.hero__comment-input.invalid:focus {
+  border: 2px solid $Invalid;
+  outline: none;
 }

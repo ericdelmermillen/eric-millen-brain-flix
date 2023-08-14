@@ -197,10 +197,10 @@ body {
   justify-content: space-between;
 }
 
-label .not-valid,
-label:focus .not-valid {
-    color: $Invalid!important;
-}
+// label .not-valid,
+// label:focus .not-valid {
+//     color: $Invalid!important;
+// }
 
 .invalid {
   border: 2px solid $Invalid;
@@ -223,7 +223,6 @@ label:focus .not-valid {
   transform: translate(-50%, -50%);
   z-index: 1; 
 }
-
 
 .upload__title-input.invalid:focus,
 .upload__description-input.invalid:focus {
