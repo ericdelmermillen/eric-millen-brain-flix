@@ -5,10 +5,10 @@ import { useState } from "react";
 import Avatar from "../Avatar/Avatar";
 import Button from "../Button/Button";
 
-const BASE_URL = "http://localhost:8080/";
 const VIDEOS_ENDPOINT = "videos"
 
 function NewComment({avatarImg, commentIcon, currentVideoId}) {
+const BASE_URL = "http://localhost:8080/";
 
 const [formSubmitted, setFormSubmitted] = useState(false);
 const [commentData, setCommentData] = useState("");
@@ -33,7 +33,10 @@ const [commentData, setCommentData] = useState("");
   return (
     <article className="hero__new-comment">
 
-      <Avatar avatarImg={avatarImg} ariaDescription={"profile icon for Mohan"}/>
+      <Avatar 
+        avatarImg={`${BASE_URL}images/Mohan-muruge.jpg`} 
+        ariaDescription={"profile icon for Mohan"}
+      />
 
       <form id="commentForm" className="hero__form" onSubmit={(e) => handleSubmit(e)}>
 

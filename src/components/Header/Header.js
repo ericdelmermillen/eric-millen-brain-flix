@@ -1,6 +1,4 @@
 import "./Header.scss";
-
-import avatarImg from "../../assets/images/Images/Mohan-muruge.jpg";
 import logo from "../../assets/images/Logo/BrainFlix-logo.svg";
 import uploadIcon from "../../assets/images/Icons/upload.svg";
 import searchIcon from "../../assets/images/Icons/search.svg";
@@ -10,8 +8,10 @@ import Button from "../Button/Button";
 import Search from "../Search/Search";
 
 import { Link } from 'react-router-dom';
+const BASE_URL = "http://localhost:8080/";
 
 function Header() {
+  
 
   const searchIconStyle = {
   backgroundImage: `url(${searchIcon})`,
@@ -31,8 +31,10 @@ function Header() {
       <Search searchIconStyle={searchIconStyle} searchId={"search"} labelText={"Video Search"} placeholder="Search"/>
 
       <Avatar 
-        avatarImg={avatarImg} 
-        ariaDescription={"profile icon for Mohan"}/>
+        // avatarImg={avatarImg} 
+        avatarImg={`${BASE_URL}images/Mohan-muruge.jpg`} 
+        ariaDescription={"profile icon for Mohan"}
+      />
 
       <Button 
         buttonText="UPLOAD" 

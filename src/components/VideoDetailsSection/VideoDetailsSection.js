@@ -1,6 +1,5 @@
 import "./VideoDetailsSection.scss";
 
-import avatar from "../../assets/images/Images/Mohan-muruge.jpg";
 import commentIcon from "../../assets/images/Icons/add_comment.svg"
 import likesIcon from "../../assets/images/Icons/likes.svg";
 import viewsIcon from "../../assets/images/Icons/views.svg";
@@ -18,12 +17,11 @@ function VideoDetailsSection({ currentVideo}) {
       <HeroDetails currentVideo={currentVideo} viewsIcon={viewsIcon} likesIcon={likesIcon}/>
 
       <NewComment 
-        avatarImg={avatar} 
         commentIcon={commentIcon} 
         currentVideoId={currentVideo.id}
         />
 
-      <HeroComments currentVideo={currentVideo} avatar={avatar}/>
+      <HeroComments currentVideo={currentVideo}/>
 
     </section>
     
