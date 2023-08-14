@@ -2,7 +2,7 @@ import "./HeroVideo.scss";
 
 import Loading from "../Loading/Loading";
 
-function HeroVideo({currentVideoPoster}) {
+function HeroVideo({currentVideoPoster, BASE_URL}) {
 
   return (
 
@@ -11,7 +11,7 @@ function HeroVideo({currentVideoPoster}) {
       ? ( <video 
             className="hero__video" 
             src="" 
-            poster={currentVideoPoster} 
+            poster={`${BASE_URL}/${currentVideoPoster}`} 
             controls>
             </video> ) 
         : ( <Loading /> )}

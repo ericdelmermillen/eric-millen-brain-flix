@@ -59,11 +59,16 @@ function Home() {
     <>
         <div className="hero">
           <div className="hero__inner">
-            <HeroVideo currentVideoPoster={currentVideo.image} />
+            <HeroVideo 
+              currentVideoPoster={currentVideo.image} BASE_URL={BASE_URL}
+            />
           </div>
         </div>
 
-        <Main currentVideo={currentVideo} videosListData={videosListData}
+        <Main 
+          currentVideo={currentVideo} 
+          videosListData={videosListData}
+          BASE_URL={BASE_URL}
         />
     </>
   )};

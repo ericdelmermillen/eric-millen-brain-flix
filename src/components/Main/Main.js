@@ -3,7 +3,7 @@ import "./Main.scss";
 import NextVideos from "../NextVideos/NextVideos";
 import VideoDetailsSection from "../VideoDetailsSection/VideoDetailsSection";
 
-function Main({ currentVideo, videosListData}) {
+function Main({ currentVideo, videosListData,BASE_URL}) {
   
   return (
     <main className="main">
@@ -15,6 +15,7 @@ function Main({ currentVideo, videosListData}) {
       <NextVideos 
         videosListData={videosListData} 
         currentVideoId={currentVideo.id} 
+        BASE_URL={BASE_URL}
       /> 
 
     </main>

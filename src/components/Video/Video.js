@@ -1,14 +1,14 @@
 import "./Video.scss";
 import { Link } from "react-router-dom";
 
-function Video({video}) {
+function Video({video, BASE_URL}) {
   const { channel, id, image, title} = video;
 
   return (
 
       <Link to={`/videos/${id}`} className="video-link">
         <div className="video" >
-          <img className="video__thumbnail" src={image} alt="" />
+          <img className="video__thumbnail" src={`${BASE_URL}/${image}`} alt="" />
           <div className="video__text">
             <h4 className="video__title">
               {title}
