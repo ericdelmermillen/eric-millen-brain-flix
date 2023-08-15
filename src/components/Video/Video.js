@@ -17,7 +17,6 @@ function Video({video, BASE_URL}) {
           </div>
         </div>
       </Link>
-
   )};
 
 export default Video;

@@ -3,10 +3,10 @@
 
 .hero {
   &__details {
-  @include padding-block;
-  @include padding-inline(
-    $padding-left-desktop: 0
-  );
+    @include padding-block;
+    @include padding-inline(
+      $padding-left-desktop: 0
+    );
   }
   
   &__heading {

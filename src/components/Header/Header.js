@@ -11,14 +11,12 @@ import { Link } from 'react-router-dom';
 const BASE_URL = "http://localhost:8080/";
 
 function Header() {
-  
-
   const searchIconStyle = {
   backgroundImage: `url(${searchIcon})`,
-  backgroundPosition: "5px center",
+  backgroundPosition: "0.3125rem center",
   backgroundRepeat: "no-repeat",
-  backgroundSize: "20px",
-  paddingLeft: "30px",
+  backgroundSize: "1.25rem",
+  paddingLeft: "1.875rem",
 };
 
   return (
@@ -31,7 +29,6 @@ function Header() {
       <Search searchIconStyle={searchIconStyle} searchId={"search"} labelText={"Video Search"} placeholder="Search"/>
 
       <Avatar 
-        // avatarImg={avatarImg} 
         avatarImg={`${BASE_URL}images/Mohan-muruge.jpg`} 
         ariaDescription={"profile icon for Mohan"}
       />

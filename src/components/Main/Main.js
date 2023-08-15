@@ -3,7 +3,7 @@ import "./Main.scss";
 import NextVideos from "../NextVideos/NextVideos";
 import VideoDetailsSection from "../VideoDetailsSection/VideoDetailsSection";
 
-function Main({ currentVideo, videosListData,BASE_URL}) {
+function Main({ currentVideo, videosListData, BASE_URL}) {
   
   return (
     <main className="main">

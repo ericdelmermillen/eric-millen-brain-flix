@@ -4,31 +4,33 @@ import { useState } from "react";
 
 import Avatar from "../Avatar/Avatar";
 import Button from "../Button/Button";
+import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 
-const VIDEOS_ENDPOINT = "videos"
+const VIDEOS_ENDPOINT = "videos";
 
-function NewComment({avatarImg, commentIcon, currentVideoId}) {
+function NewComment({ commentIcon, currentVideoId}) {
 const BASE_URL = "http://localhost:8080/";
 
 const [formSubmitted, setFormSubmitted] = useState(false);
 const [commentData, setCommentData] = useState("");
+const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormSubmitted(true); 
-    const commentDataObj = { comment: commentData, id: currentVideoId};
-
+    setFormSubmitted(true);
+    
     if (commentData.length >= 10) {
-  
+      setIsLoading(true);
+      const commentDataObj = { comment: commentData, id: currentVideoId};
+      
       axios
         .post(`${BASE_URL}${VIDEOS_ENDPOINT}/${currentVideoId}/comments`, commentDataObj)
         .then((response) => {
           setCommentData("");
-      });
-    }
-    setFormSubmitted(false);
-  };
-
+          setFormSubmitted(false);
+          setIsLoading(false);
+        });
+    }};
   
   return (
     <article className="hero__new-comment">
@@ -59,6 +61,7 @@ const [commentData, setCommentData] = useState("");
             value={commentData}
             onChange={(e) => setCommentData(e.target.value)}
           />
+          {isLoading && <LoadingSpinner /> }
 
         </div>
 

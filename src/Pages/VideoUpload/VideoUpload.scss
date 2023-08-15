@@ -43,9 +43,7 @@ body {
 .upload {
 
   &__content-container {
-
     @media (min-width: $desktop-width) {
-      display: flex;
       @include gap;
     }
   }
@@ -56,6 +54,7 @@ body {
     object-fit: cover;
     width: 100%;
     margin-bottom: 1.5rem;
+    // border: 2px solid green;
     
     @media (min-width: $tablet-width) {
       width: 50%;
@@ -185,9 +184,9 @@ body {
 
   @media (min-width: $desktop-width) {
     @include gap;
-    border-top: 2px solid $Mercury;
     display: flex;
     flex-direction: row-reverse;
+    border-top: 2px solid $Mercury;
   }
 }
 

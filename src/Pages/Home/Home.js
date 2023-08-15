@@ -1,8 +1,8 @@
-// working from my api
 import "./Home.scss"
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from 'react-router-dom';
+
+import axios from "axios";
 
 import HeroVideo from "../../components/HeroVideo/HeroVideo";
 import Loading from "../../components/Loading/Loading";
@@ -37,14 +37,9 @@ function Home() {
           .catch((error) => {
             console.error("Error fetching video details:", error);
             setTimeout(() => setIsLoading(false), 500);
-            navigate("/NotFound")
+            navigate("/NotFound");
           }); 
         })
-        .catch((error) => {
-          console.error("Error fetching data:", error);
-          setTimeout(() => setIsLoading(false), 500);
-          navigate("/NotFound")
-        });
       }, [id, navigate]);
 
   useEffect(() => {
@@ -60,7 +55,8 @@ function Home() {
         <div className="hero">
           <div className="hero__inner">
             <HeroVideo 
-              currentVideoPoster={currentVideo.image} BASE_URL={BASE_URL}
+              currentVideoPoster={currentVideo.image} 
+              BASE_URL={BASE_URL}
             />
           </div>
         </div>

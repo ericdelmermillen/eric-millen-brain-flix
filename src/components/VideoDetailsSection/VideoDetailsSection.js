@@ -14,14 +14,20 @@ function VideoDetailsSection({ currentVideo}) {
 
     <section className="video-details">
 
-      <HeroDetails currentVideo={currentVideo} viewsIcon={viewsIcon} likesIcon={likesIcon}/>
+      <HeroDetails 
+        currentVideo={currentVideo} 
+        viewsIcon={viewsIcon} 
+        likesIcon={likesIcon}
+      />
 
       <NewComment 
         commentIcon={commentIcon} 
         currentVideoId={currentVideo.id}
-        />
+      />
 
-      <HeroComments currentVideo={currentVideo}/>
+      <HeroComments 
+        currentVideo={currentVideo}
+      />
 
     </section>
     

@@ -6,7 +6,7 @@
     $margin-top-desktop: 1.5rem,
     $margin-bottom-desktop: 1.5rem
   );
-  border: 2px solid $Mercury;
+  border: 0.125rem solid $Mercury;
   border-radius: 0.25rem;
   display: inline-block;
   height: 2.5rem;
@@ -19,12 +19,12 @@
   }
 
   &:focus {
-    border: 2px solid $BrainFlixBlue;
+    border: 0.125rem solid $BrainFlixBlue;
     outline: none;
   }
   
   &:invalid {
-    border: 2px solid $Invalid;
+    border: 0.125rem solid $Invalid;
   }
 
   &__label {
@@ -36,7 +36,7 @@
   }
 
   &__form {
-    max-height: 88px;
+    max-height: 5.5rem;
     width: calc(100% - (2.5rem + 5%));
   
     @media (min-width: $tablet-width) {

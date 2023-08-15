@@ -11,7 +11,7 @@
       $padding-top-desktop: 1.5rem,
     );
     @include margin-inline;
-    border-bottom: 2px solid $Mercury;
+    border-bottom: 0.125rem solid $Mercury;
     display: flex;
     padding-left: 1rem;
     padding-right: 1rem;
@@ -86,7 +86,7 @@
     );
     @include padding-inline;
     background: $Alabaster;
-    border: 2px solid $Mercury;
+    border: 0.125rem solid $Mercury;
     border-radius: 0.25rem;
     font-family: inherit;
     font-size: 1rem;
@@ -100,12 +100,12 @@
     }
   
     &:focus {
-      border: 2px solid $BrainFlixBlue;
+      border: 0.125rem solid $BrainFlixBlue;
       outline: none;
     }
     
     &:invalid {
-      border: 2px solid $Invalid;
+      border: 0.125rem solid $Invalid;
       outline: none;
     }
   }
@@ -124,6 +124,6 @@
 
 .hero__comment-input.invalid:focus,
 .hero__comment-input.invalid:focus {
-  border: 2px solid $Invalid;
+  border: 0.125rem solid $Invalid;
   outline: none;
 }
