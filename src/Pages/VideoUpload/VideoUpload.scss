@@ -174,8 +174,9 @@ body {
 }
 
 
-
 .upload__button-container {
+  display: flex;
+  border: 2px solid red;
   @media (min-width: $tablet-width) {
     @include gap;
     display: flex;

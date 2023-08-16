@@ -1,7 +1,7 @@
 import "./Button.scss";
 import { Link } from 'react-router-dom';
 
-function Button({ backgroundColor, buttonText, btnType, color, iconAlt, iconSource, onClick, to }) {
+function Button({ backgroundColor, buttonText, btnType, color, iconAlt, iconSource, onClick, to, widthClasses }) {
 
   const buttonStyle = {
     backgroundColor: backgroundColor || "",
@@ -16,7 +16,7 @@ function Button({ backgroundColor, buttonText, btnType, color, iconAlt, iconSour
 
   return (
     <Link
-      className="btn"
+      className={widthClasses ||`btn`}
       to={to}
       type={btnType}
       style={buttonStyle}

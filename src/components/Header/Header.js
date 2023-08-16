@@ -32,12 +32,14 @@ function Header() {
         avatarImg={`${BASE_URL}images/Mohan-muruge.jpg`} 
         ariaDescription={"profile icon for Mohan"}
       />
-
+      
       <Button 
-        buttonText="UPLOAD" 
+        // buttonText="Add New Item" 
         iconAlt="upload icon" 
         iconSource={uploadIcon} 
         to={"/upload"}
+        // widthClasses={"btn full"}
+        // backgroundColor="transparent"
         />
     </div>
   )};

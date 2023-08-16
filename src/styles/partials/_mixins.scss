@@ -93,46 +93,46 @@
   }
 }
 
-@mixin btn(
-  $font-size-mobile: 0.625rem,
-  $line-height-mobile: 1.25rem, 
-  $font-weight-mobile: 700,
-  $font-size-tablet: 0.75rem,
-  $line-height-tablet: 1.25rem, 
-  $font-weight-tablet: 700
-  ) {
+// @mixin btn(
+//   $font-size-mobile: 0.625rem,
+//   $line-height-mobile: 1.25rem, 
+//   $font-weight-mobile: 700,
+//   $font-size-tablet: 0.75rem,
+//   $line-height-tablet: 1.25rem, 
+//   $font-weight-tablet: 700
+//   ) {
 
-  background: $BrainFlixBlue;
-  border: none;
-  border-radius: 0.25rem;
-  color: $White;
-  font-size: $font-size-mobile;
-  font-weight: $font-weight-mobile;
-  height: 2.5rem;
-  line-height: 2.5rem;
-  outline: none;
-  width: 100%;
+//   background: $BrainFlixBlue;
+//   border: none;
+//   border-radius: 0.25rem;
+//   color: $White;
+//   font-size: $font-size-mobile;
+//   font-weight: $font-weight-mobile;
+//   height: 2.5rem;
+//   line-height: 2.5rem;
+//   outline: none;
+//   width: 100%;
   
 
-  @media (min-width: $tablet-width) {
-    min-width: 9.375rem;
-  }
+//   @media (min-width: $tablet-width) {
+//     min-width: 9.375rem;
+//   }
   
-  &:hover,
-  &:active {
-    background: $BrainFlix-DarkBlue;
-    color: $White;
-  }
+//   &:hover,
+//   &:active {
+//     background: $BrainFlix-DarkBlue;
+//     color: $White;
+//   }
   
-  &:active {
-    scale: 0.98;
-  }
+//   &:active {
+//     scale: 0.98;
+//   }
 
-  &:focus {
-    border: none;
-    outline: none;
-  }
-}
+//   &:focus {
+//     border: none;
+//     outline: none;
+//   }
+// }
 
 // margin-block (margin top & margin-bottom)
 @mixin margin-block(
